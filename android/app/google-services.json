@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "743946970730",
+    "project_id": "groliver-1f16e",
+    "storage_bucket": "groliver-1f16e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743946970730:android:bb52b0370aeb291e4dcc13",
+        "android_client_info": {
+          "package_name": "com.vendor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743946970730-gfkghk4ij0slan0u4midndi79ei1fjtd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqoEG0l7Y3a18DYvsnDs6YdoGCYkf5P5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743946970730-gfkghk4ij0slan0u4midndi79ei1fjtd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
