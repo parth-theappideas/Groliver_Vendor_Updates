@@ -28,7 +28,8 @@ const Splash = () => {
                     navigation.replace("Dashboard");
                 }
                 else {
-                    navigation.replace('Signin')
+                    navigation.replace('MyPager');
+                    // navigation.replace("Signin");
                 }
             }, 1000)
             console.log("get data success", Data);

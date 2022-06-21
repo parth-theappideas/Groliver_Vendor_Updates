@@ -19,6 +19,7 @@ import VerificationModal from "../../../modals/VerificationModal/VerificationMod
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Globals from "../../../utils/Globals"
 import { vs } from "../../../utils/stylesUtils";
+import ModalLoadingIndicator from "../../../components/ModalLoadingIndicator";
 
 const CELL_COUNT = 6;
 
@@ -156,7 +157,7 @@ const Verification = ({ navigation, route }) => {
                 modalVisible={modalVisible}
                 setModalVisible={setModalVisible}
             />
-            {Loading ? <LoadingIndicator /> : null}
+            {Loading ? <ModalLoadingIndicator /> : null}
         </ScrollView>
     )
 }

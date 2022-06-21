@@ -1,46 +1,47 @@
 import React, { useState } from "react";
-import { View, Text, Image, ToastAndroid, ScrollView, Pressable, StatusBar } from 'react-native'
+import { View, Text, Image, ToastAndroid, ScrollView, Pressable, StatusBar } from 'react-native';
 import Container from "../../../components/container";
-import InputBox from '../../../components/InputBox'
+import InputBox from '../../../components/InputBox';
 import Label from "../../../components/Label";
 import Images from "../../../const/Images";
 import { fs, hs, vs } from "../../../utils/stylesUtils";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import styles from "./Styles";
 import LoadingIndicator from "../../../components/LoadingIndicator";
+import ModalLoadingIndicator from "../../../components/ModalLoadingIndicator";
 
-const OrderManage = ({ navigation }) => {
-    const [Loading, setLoading] = useState(false);
+const OrderManage = ( { navigation } ) => {
+    const [ Loading, setLoading ] = useState( false );
 
     const Logout = async () => {
-        setLoading(true);
+        setLoading( true );
         try {
-            const Data = await AsyncStorage.removeItem('@store1:User');
-            if (Data) {
-                navigation.replace("Signin");
-                ToastAndroid.show("Logout Successfully", ToastAndroid.SHORT);
+            const Data = await AsyncStorage.removeItem( '@store1:User' );
+            if ( Data ) {
+                navigation.replace( "Signin" );
+                ToastAndroid.show( "Logout Successfully", ToastAndroid.SHORT );
             } else {
-                console.log("Unsuccessfull Delete", Data);
+                console.log( "Unsuccessfull Delete", Data );
             }
-            console.log("Successfully Delete", Data);
+            console.log( "Successfully Delete", Data );
         }
-        catch (e) {
-            console.log("error", e);
+        catch ( e ) {
+            console.log( "error", e );
         }
-        navigation.reset({
+        navigation.reset( {
             index: 0,
-            routes: [{ name: 'Signin' }]
-        })
-        setLoading(false);
-    }
+            routes: [ { name: 'Signin' } ]
+        } );
+        setLoading( false );
+    };
     return (
-        <ScrollView contentContainerStyle={{
-            paddingBottom: vs(10),
-        }} style={{
+        <ScrollView contentContainerStyle={ {
+            paddingBottom: vs( 10 ),
+        } } style={ {
             backgroundColor: 'white'
-        }}>
+        } }>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
-            <Container containerStyle={styles.container}>
+            <Container containerStyle={ styles.container }>
                 {/* <InputBox
                     placeholder="Search"
                     inputStyle={{
@@ -51,51 +52,51 @@ const OrderManage = ({ navigation }) => {
                     textSize={14}
                     leftIcon={() => <Image source={Images.search_2} style={styles.search_img} />}
                 /> */}
-                <Container containerStyle={styles.search_input}>
+                <Container containerStyle={ styles.search_input }>
                     <Container
-                        onPress={() => navigation.navigate("SearchComponent")}
-                        leftIcon={() => <Image source={Images.search_2} style={styles.search_img} />}
-                        leftLabel={() =>
-                            <Label style={{
+                        onPress={ () => navigation.navigate( "SearchComponent" ) }
+                        leftIcon={ () => <Image source={ Images.search_2 } style={ styles.search_img } /> }
+                        leftLabel={ () =>
+                            <Label style={ {
                                 position: 'absolute',
-                                left: hs(40),
-                                fontSize: fs(13),
-                                top: vs(14),
+                                left: hs( 40 ),
+                                fontSize: fs( 13 ),
+                                top: vs( 14 ),
                                 color: 'grey'
-                            }}>Search</Label>}
+                            } }>Search</Label> }
                     />
                 </Container>
 
-                <Container containerStyle={styles.rowContainer}>
-                    <Container containerStyle={styles.container2}>
-                        <Container onPress={() => navigation.navigate("OrdermanageLists")}>
-                            <Container containerStyle={styles.borderView}>
-                                <Pressable onPress={() => navigation.navigate("OrdermanageLists")}>
+                <Container containerStyle={ styles.rowContainer }>
+                    <Container containerStyle={ styles.container2 }>
+                        <Container onPress={ () => navigation.navigate( "OrdermanageLists" ) }>
+                            <Container containerStyle={ styles.borderView }>
+                                <Pressable onPress={ () => navigation.navigate( "OrdermanageLists" ) }>
                                     <Image
-                                        source={Images.order_manage} 
-                                        style={styles.orderManageimg}
+                                        source={ Images.order_manage }
+                                        style={ styles.orderManageimg }
                                     />
                                 </Pressable>
 
-                                <Container containerStyle={styles.textView}>
-                                    <Label style={styles.text}>Order manage</Label>
+                                <Container containerStyle={ styles.textView }>
+                                    <Label style={ styles.text }>Order manage</Label>
                                 </Container>
                             </Container>
                         </Container>
                     </Container>
 
-                    <Container containerStyle={styles.container3}>
-                        <Container onPress={() => navigation.navigate("Myproducts")}>
-                            <Container containerStyle={styles.borderView2}>
-                                <Pressable onPress={() => navigation.navigate("Myproducts")}>
+                    <Container containerStyle={ styles.container3 }>
+                        <Container onPress={ () => navigation.navigate( "Myproducts" ) }>
+                            <Container containerStyle={ styles.borderView2 }>
+                                <Pressable onPress={ () => navigation.navigate( "Myproducts" ) }>
                                     <Image
-                                        source={Images.product}
-                                        style={styles.myProductimg}
+                                        source={ Images.product }
+                                        style={ styles.myProductimg }
                                     />
                                 </Pressable>
 
-                                <Container containerStyle={styles.textView2}>
-                                    <Label style={styles.text2}>My Products</Label>
+                                <Container containerStyle={ styles.textView2 }>
+                                    <Label style={ styles.text2 }>My Products</Label>
                                 </Container>
                             </Container>
                         </Container>
@@ -139,49 +140,45 @@ const OrderManage = ({ navigation }) => {
                 </Container> */}
 
 
-                <Container containerStyle={styles.rowContainer3}>
-                    <Container containerStyle={styles.container6}>
-                        <Container onPress={() => navigation.navigate("Profile")}>
-                            <Container containerStyle={styles.borderView5}>
-                                <Pressable onPress={() => navigation.navigate("Profile")}>
+                <Container containerStyle={ styles.rowContainer3 }>
+                    <Container containerStyle={ styles.container6 }>
+                        <Container onPress={ () => navigation.navigate( "Profile" ) }>
+                            <Container containerStyle={ styles.borderView5 }>
+                                <Pressable onPress={ () => navigation.navigate( "Profile" ) }>
                                     <Image
-                                        source={Images.profile_pic}
-                                        style={styles.profileimg}
+                                        source={ Images.profile_pic }
+                                        style={ styles.profileimg }
                                     />
                                 </Pressable>
 
-                                <Container containerStyle={styles.textView5}>
-                                    <Label style={styles.text5}>My Profile</Label>
+                                <Container containerStyle={ styles.textView5 }>
+                                    <Label style={ styles.text5 }>My Profile</Label>
                                 </Container>
                             </Container>
                         </Container>
                     </Container>
 
-                    <Container containerStyle={styles.container7}>
-                        <Container onPress={() => Logout()}>
-                            <Container containerStyle={styles.borderView6}>
-                                <Pressable onPress={() => Logout()}>
+                    <Container containerStyle={ styles.container7 }>
+                        <Container onPress={ () => Logout() }>
+                            <Container containerStyle={ styles.borderView6 }>
+                                <Pressable onPress={ () => Logout() }>
                                     <Image
-                                        source={Images.logout}
-                                        style={styles.logoutimg}
+                                        source={ Images.logout }
+                                        style={ styles.logoutimg }
                                     />
                                 </Pressable>
 
-                                <Container containerStyle={styles.textview6}>
-                                    <Label style={styles.text6}>Logout</Label>
+                                <Container containerStyle={ styles.textview6 }>
+                                    <Label style={ styles.text6 }>Logout</Label>
                                 </Container>
                             </Container>
                         </Container>
                     </Container>
                 </Container>
             </Container>
-            {Loading ?
-                <View style={styles.LoadingIndicator}>
-                    <LoadingIndicator />
-                </View>
-                : null}
+            { Loading ? <ModalLoadingIndicator /> : null }
         </ScrollView>
-    )
-}
+    );
+};
 
 export default OrderManage;

@@ -9,256 +9,256 @@
 9        android:targetSdkVersion="30" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/debug/AndroidManifest.xml:5:5-77
-11-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/debug/AndroidManifest.xml:5:22-75
+11-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/debug/AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:4:5-67
-12-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:4:22-64
+12-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:4:22-64
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.99.0] /home/theappideas/.gradle/caches/transforms-3/b4bb08ed014de24ba4ea51cfdac8a107/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.99.0] /home/theappideas/.gradle/caches/transforms-3/b4bb08ed014de24ba4ea51cfdac8a107/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
+13-->[com.facebook.flipper:flipper:0.99.0] /Users/p/.gradle/caches/transforms-3/b4bb08ed014de24ba4ea51cfdac8a107/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.99.0] /Users/p/.gradle/caches/transforms-3/b4bb08ed014de24ba4ea51cfdac8a107/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
 14    <uses-permission android:name="android.permission.WAKE_LOCK" />
-14-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
-14-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
+14-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+14-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-15-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
-15-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-76
+15-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
+15-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-76
 16    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- for android -->
-16-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:5-82
-16-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:22-79
+16-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:5-82
+16-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:22-79
 17    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
 18    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
 19    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
 20    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
 21    <!-- for Samsung -->
 22    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
-22-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:5-86
-22-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:22-83
+22-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:5-86
+22-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:22-83
 23    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
-23-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:5-87
-23-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:22-84
+23-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:5-87
+23-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:22-84
 24    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
-24-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:5-81
-24-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:22-78
+24-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:5-81
+24-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:22-78
 25    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
-25-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:5-83
-25-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:22-80
+25-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:5-83
+25-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:22-80
 26    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
-26-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:5-88
-26-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:22-85
+26-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:5-88
+26-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:22-85
 27    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
-27-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:5-92
-27-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:22-89
+27-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:5-92
+27-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:22-89
 28    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
-28-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:5-84
-28-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:22-81
+28-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:5-84
+28-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:22-81
 29    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
-29-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:5-83
-29-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:22-80
+29-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:5-83
+29-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:22-80
 30    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
-30-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:5-91
-30-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:22-88
+30-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:5-91
+30-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:22-88
 31    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
-31-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:5-92
-31-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:22-89
+31-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:5-92
+31-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:22-89
 32    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
-32-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:5-93
-32-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:22-90
+32-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:5-93
+32-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:22-90
 33    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
-33-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:5-73
-33-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:22-70
+33-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:5-73
+33-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:22-70
 34    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
-34-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:5-82
-34-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:22-79
+34-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:5-82
+34-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:22-79
 35    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
-35-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:5-83
-35-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:22-80
+35-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:5-83
+35-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:22-80
 36    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
-36-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:5-88
-36-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:22-85
+36-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:5-88
+36-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:22-85
 37    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
-37-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:5-89
-37-->[me.leolin:ShortcutBadger:1.1.22] /home/theappideas/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:22-86
+37-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:5-89
+37-->[me.leolin:ShortcutBadger:1.1.22] /Users/p/.gradle/caches/transforms-3/32ec300d06d2392f0578173a0b9a1ae2/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:22-86
 38
 39    <application
-39-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:6:5-24:19
+39-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:6:5-24:19
 40        android:name="com.vendor.MainApplication"
-40-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:7:7-38
+40-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:7:7-38
 41        android:allowBackup="false"
-41-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:11:7-34
+41-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:11:7-34
 42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-42-->[androidx.core:core:1.6.0] /home/theappideas/.gradle/caches/transforms-3/64a9063406808f30fdf55983aa926644/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+42-->[androidx.core:core:1.6.0] /Users/p/.gradle/caches/transforms-3/64a9063406808f30fdf55983aa926644/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 43        android:debuggable="true"
 44        android:icon="@mipmap/ic_launcher"
-44-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:9:7-41
+44-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:9:7-41
 45        android:label="@string/app_name"
-45-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:8:7-39
+45-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:8:7-39
 46        android:roundIcon="@mipmap/ic_launcher_round"
-46-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:10:7-52
+46-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:10:7-52
 47        android:theme="@style/AppTheme"
-47-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:12:7-38
+47-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:12:7-38
 48        android:usesCleartextTraffic="true" >
-48-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/debug/AndroidManifest.xml:8:9-44
+48-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/debug/AndroidManifest.xml:8:9-44
 49        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-49-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/debug/AndroidManifest.xml:11:9-86
-49-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/debug/AndroidManifest.xml:11:19-83
+49-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/debug/AndroidManifest.xml:11:9-86
+49-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/debug/AndroidManifest.xml:11:19-83
 50        <activity
-50-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:13:7-23:18
+50-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:13:7-23:18
 51            android:name="com.vendor.MainActivity"
-51-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:14:9-37
+51-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:14:9-37
 52            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-52-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:16:9-86
+52-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:16:9-86
 53            android:label="@string/app_name"
-53-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:15:9-41
+53-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:15:9-41
 54            android:launchMode="singleTask"
-54-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:17:9-40
+54-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:17:9-40
 55            android:windowSoftInputMode="adjustResize" >
-55-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:18:9-51
+55-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:18:9-51
 56            <intent-filter>
-56-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:19:9-22:25
+56-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:19:9-22:25
 57                <action android:name="android.intent.action.MAIN" />
-57-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:20:13-65
-57-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:20:21-62
+57-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:20:13-65
+57-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:20:21-62
 58
 59                <category android:name="android.intent.category.LAUNCHER" />
-59-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:21:13-73
-59-->/home/theappideas/React Native/GroliverVendorApp/android/app/src/main/AndroidManifest.xml:21:23-70
+59-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:21:13-73
+59-->/Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/android/app/src/main/AndroidManifest.xml:21:23-70
 60            </intent-filter>
 61        </activity>
 62
 63        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
-63-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-111
-63-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-108
+63-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-111
+63-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-108
 64        <service
-64-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-21:19
+64-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-21:19
 65            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
-65-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-95
+65-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-95
 66            android:exported="false" >
-66-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
+66-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
 67            <intent-filter>
-67-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
+67-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
 68                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-68-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
-68-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
+68-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
+68-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
 69            </intent-filter>
 70        </service>
 71
 72        <receiver
-72-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-30:20
+72-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-30:20
 73            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
-73-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-96
+73-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-96
 74            android:exported="true"
-74-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-36
+74-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-36
 75            android:permission="com.google.android.c2dm.permission.SEND" >
-75-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-73
+75-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-73
 76            <intent-filter>
-76-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
+76-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
 77                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-77-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
-77-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
+77-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
+77-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
 78            </intent-filter>
 79        </receiver>
 80
 81        <meta-data
-81-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:32:9-34:36
+81-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:32:9-34:36
 82            android:name="firebase_messaging_auto_init_enabled"
-82-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-64
+82-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-64
 83            android:value="true" />
-83-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:13-33
+83-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:13-33
 84        <meta-data
-84-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:9-37:32
+84-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:9-37:32
 85            android:name="com.google.firebase.messaging.default_notification_channel_id"
-85-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-89
+85-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-89
 86            android:value="" />
-86-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-29
+86-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-29
 87        <meta-data
-87-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:9-40:47
+87-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:9-40:47
 88            android:name="com.google.firebase.messaging.default_notification_color"
-88-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-84
+88-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-84
 89            android:resource="@color/white" />
-89-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-44
+89-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-44
 90        <meta-data
-90-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:36
+90-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:36
 91            android:name="app_data_collection_default_enabled"
-91-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
+91-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
 92            android:value="true" />
-92-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-33
+92-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-33
 93
 94        <service
-94-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-18:19
+94-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-18:19
 95            android:name="com.google.firebase.components.ComponentDiscoveryService"
-95-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-89
+95-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-89
 96            android:directBootAware="true"
-96-->[com.google.firebase:firebase-common:20.1.1] /home/theappideas/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
+96-->[com.google.firebase:firebase-common:20.1.1] /Users/p/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
 97            android:exported="false" >
-97-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:54:13-37
+97-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:54:13-37
 98            <meta-data
-98-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:85
+98-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:85
 99                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
-99-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-120
+99-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-120
 100                android:value="com.google.firebase.components.ComponentRegistrar" />
-100-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-82
+100-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-82
 101            <meta-data
-101-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:55:13-57:85
+101-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:55:13-57:85
 102                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-102-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:56:17-119
+102-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:56:17-119
 103                android:value="com.google.firebase.components.ComponentRegistrar" />
-103-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:57:17-82
+103-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:57:17-82
 104            <meta-data
-104-->[com.google.firebase:firebase-datatransport:18.1.3] /home/theappideas/.gradle/caches/transforms-3/55f4affd71a3df2b2c58d42fdedd824f/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:28:13-30:85
+104-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/p/.gradle/caches/transforms-3/55f4affd71a3df2b2c58d42fdedd824f/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:28:13-30:85
 105                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-105-->[com.google.firebase:firebase-datatransport:18.1.3] /home/theappideas/.gradle/caches/transforms-3/55f4affd71a3df2b2c58d42fdedd824f/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:29:17-115
+105-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/p/.gradle/caches/transforms-3/55f4affd71a3df2b2c58d42fdedd824f/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:29:17-115
 106                android:value="com.google.firebase.components.ComponentRegistrar" />
-106-->[com.google.firebase:firebase-datatransport:18.1.3] /home/theappideas/.gradle/caches/transforms-3/55f4affd71a3df2b2c58d42fdedd824f/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:30:17-82
+106-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/p/.gradle/caches/transforms-3/55f4affd71a3df2b2c58d42fdedd824f/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:30:17-82
 107            <meta-data
-107-->[com.google.firebase:firebase-installations:17.0.1] /home/theappideas/.gradle/caches/transforms-3/af9a04c311ad76b3e1c1e3c6b85c6ddd/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
+107-->[com.google.firebase:firebase-installations:17.0.1] /Users/p/.gradle/caches/transforms-3/af9a04c311ad76b3e1c1e3c6b85c6ddd/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
 108                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-108-->[com.google.firebase:firebase-installations:17.0.1] /home/theappideas/.gradle/caches/transforms-3/af9a04c311ad76b3e1c1e3c6b85c6ddd/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
+108-->[com.google.firebase:firebase-installations:17.0.1] /Users/p/.gradle/caches/transforms-3/af9a04c311ad76b3e1c1e3c6b85c6ddd/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
 109                android:value="com.google.firebase.components.ComponentRegistrar" />
-109-->[com.google.firebase:firebase-installations:17.0.1] /home/theappideas/.gradle/caches/transforms-3/af9a04c311ad76b3e1c1e3c6b85c6ddd/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
+109-->[com.google.firebase:firebase-installations:17.0.1] /Users/p/.gradle/caches/transforms-3/af9a04c311ad76b3e1c1e3c6b85c6ddd/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
 110        </service>
 111
 112        <provider
-112-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-24:38
+112-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-24:38
 113            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
-113-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-88
+113-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-88
 114            android:authorities="com.vendor.reactnativefirebaseappinitprovider"
-114-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-86
+114-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-86
 115            android:exported="false"
-115-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
+115-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
 116            android:initOrder="99" />
-116-->[:react-native-firebase_app] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-35
+116-->[:react-native-firebase_app] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-35
 117        <provider
-117-->[:react-native-image-picker] /home/theappideas/React Native/GroliverVendorApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+117-->[:react-native-image-picker] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 118            android:name="com.imagepicker.ImagePickerProvider"
-118-->[:react-native-image-picker] /home/theappideas/React Native/GroliverVendorApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
+118-->[:react-native-image-picker] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
 119            android:authorities="com.vendor.imagepickerprovider"
-119-->[:react-native-image-picker] /home/theappideas/React Native/GroliverVendorApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-71
+119-->[:react-native-image-picker] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-71
 120            android:exported="false"
-120-->[:react-native-image-picker] /home/theappideas/React Native/GroliverVendorApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+120-->[:react-native-image-picker] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 121            android:grantUriPermissions="true" >
-121-->[:react-native-image-picker] /home/theappideas/React Native/GroliverVendorApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+121-->[:react-native-image-picker] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
 122            <meta-data
-122-->[:react-native-image-picker] /home/theappideas/React Native/GroliverVendorApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
+122-->[:react-native-image-picker] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
 123                android:name="android.support.FILE_PROVIDER_PATHS"
-123-->[:react-native-image-picker] /home/theappideas/React Native/GroliverVendorApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+123-->[:react-native-image-picker] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 124                android:resource="@xml/imagepicker_provider_paths" />
-124-->[:react-native-image-picker] /home/theappideas/React Native/GroliverVendorApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+124-->[:react-native-image-picker] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
 125        </provider>
 126
 127        <receiver
-127-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:31:9-38:20
+127-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:31:9-38:20
 128            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-128-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:32:13-78
+128-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:32:13-78
 129            android:exported="true"
-129-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:33:13-36
+129-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:33:13-36
 130            android:permission="com.google.android.c2dm.permission.SEND" >
-130-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:34:13-73
+130-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:34:13-73
 131            <intent-filter>
-131-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
+131-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
 132                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-132-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
-132-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
+132-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
+132-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
 133            </intent-filter>
 134        </receiver>
 135        <!--
@@ -266,103 +266,103 @@
 137             but set to not exported to explicitly avoid allowing another app to call it.
 138        -->
 139        <service
-139-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:44:9-51:19
+139-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:44:9-51:19
 140            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-140-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:45:13-82
+140-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:45:13-82
 141            android:directBootAware="true"
-141-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:46:13-43
+141-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:46:13-43
 142            android:exported="false" >
-142-->[com.google.firebase:firebase-messaging:23.0.4] /home/theappideas/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:47:13-37
+142-->[com.google.firebase:firebase-messaging:23.0.4] /Users/p/.gradle/caches/transforms-3/456e9367f0e41a95510828c4f992428e/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:47:13-37
 143            <intent-filter android:priority="-500" >
-143-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
+143-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
 144                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-144-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
-144-->[:react-native-firebase_messaging] /home/theappideas/React Native/GroliverVendorApp/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
+144-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
+144-->[:react-native-firebase_messaging] /Users/p/Desktop/ReactNative/Groliver_Vendor_Updates/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
 145            </intent-filter>
 146        </service>
 147        <service
-147-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/theappideas/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:29:9-35:19
+147-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/p/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:29:9-35:19
 148            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-148-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/theappideas/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:30:13-103
+148-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/p/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:30:13-103
 149            android:exported="false" >
-149-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/theappideas/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:31:13-37
+149-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/p/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:31:13-37
 150            <meta-data
-150-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/theappideas/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:32:13-34:39
+150-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/p/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:32:13-34:39
 151                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-151-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/theappideas/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:33:17-94
+151-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/p/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:33:17-94
 152                android:value="cct" />
-152-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /home/theappideas/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:34:17-36
+152-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/p/.gradle/caches/transforms-3/b4e0ef8e115673153936a291efe9f21f/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:34:17-36
 153        </service>
 154        <service
-154-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/theappideas/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:26:9-30:19
+154-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/p/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:26:9-30:19
 155            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-155-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/theappideas/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:27:13-117
+155-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/p/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:27:13-117
 156            android:exported="false"
-156-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/theappideas/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:28:13-37
+156-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/p/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:28:13-37
 157            android:permission="android.permission.BIND_JOB_SERVICE" >
-157-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/theappideas/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:29:13-69
+157-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/p/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:29:13-69
 158        </service>
 159
 160        <receiver
-160-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/theappideas/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:32:9-34:40
+160-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/p/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:32:9-34:40
 161            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-161-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/theappideas/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:33:13-132
+161-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/p/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:33:13-132
 162            android:exported="false" />
-162-->[com.google.android.datatransport:transport-runtime:3.1.4] /home/theappideas/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:34:13-37
+162-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/p/.gradle/caches/transforms-3/0b2d69444c633d77e259fe5d99916777/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:34:13-37
 163
 164        <activity
-164-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:23:9-27:75
+164-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:23:9-27:75
 165            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-165-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:24:13-93
+165-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:24:13-93
 166            android:excludeFromRecents="true"
-166-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:25:13-46
+166-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:25:13-46
 167            android:exported="false"
-167-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:26:13-37
+167-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:26:13-37
 168            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-168-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:27:13-72
+168-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:27:13-72
 169        <!--
 170            Service handling Google Sign-In user revocation. For apps that do not integrate with
 171            Google Sign-In, this service will never be started.
 172        -->
 173        <service
-173-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:33:9-37:51
+173-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:33:9-37:51
 174            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-174-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:34:13-89
+174-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:34:13-89
 175            android:exported="true"
-175-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:35:13-36
+175-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:35:13-36
 176            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-176-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:36:13-107
+176-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:36:13-107
 177            android:visibleToInstantApps="true" />
-177-->[com.google.android.gms:play-services-auth:20.1.0] /home/theappideas/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:37:13-48
+177-->[com.google.android.gms:play-services-auth:20.1.0] /Users/p/.gradle/caches/transforms-3/cc5470ebe82211de7758a05b1672454c/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:37:13-48
 178
 179        <activity
-179-->[com.google.android.gms:play-services-base:18.0.1] /home/theappideas/.gradle/caches/transforms-3/493a5b32eb8a4a7bb025ee227b7212c1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+179-->[com.google.android.gms:play-services-base:18.0.1] /Users/p/.gradle/caches/transforms-3/493a5b32eb8a4a7bb025ee227b7212c1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
 180            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-180-->[com.google.android.gms:play-services-base:18.0.1] /home/theappideas/.gradle/caches/transforms-3/493a5b32eb8a4a7bb025ee227b7212c1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+180-->[com.google.android.gms:play-services-base:18.0.1] /Users/p/.gradle/caches/transforms-3/493a5b32eb8a4a7bb025ee227b7212c1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
 181            android:exported="false"
-181-->[com.google.android.gms:play-services-base:18.0.1] /home/theappideas/.gradle/caches/transforms-3/493a5b32eb8a4a7bb025ee227b7212c1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+181-->[com.google.android.gms:play-services-base:18.0.1] /Users/p/.gradle/caches/transforms-3/493a5b32eb8a4a7bb025ee227b7212c1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
 182            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-182-->[com.google.android.gms:play-services-base:18.0.1] /home/theappideas/.gradle/caches/transforms-3/493a5b32eb8a4a7bb025ee227b7212c1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+182-->[com.google.android.gms:play-services-base:18.0.1] /Users/p/.gradle/caches/transforms-3/493a5b32eb8a4a7bb025ee227b7212c1/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
 183
 184        <provider
-184-->[com.google.firebase:firebase-common:20.1.1] /home/theappideas/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
+184-->[com.google.firebase:firebase-common:20.1.1] /Users/p/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
 185            android:name="com.google.firebase.provider.FirebaseInitProvider"
-185-->[com.google.firebase:firebase-common:20.1.1] /home/theappideas/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
+185-->[com.google.firebase:firebase-common:20.1.1] /Users/p/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
 186            android:authorities="com.vendor.firebaseinitprovider"
-186-->[com.google.firebase:firebase-common:20.1.1] /home/theappideas/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
+186-->[com.google.firebase:firebase-common:20.1.1] /Users/p/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
 187            android:directBootAware="true"
-187-->[com.google.firebase:firebase-common:20.1.1] /home/theappideas/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
+187-->[com.google.firebase:firebase-common:20.1.1] /Users/p/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
 188            android:exported="false"
-188-->[com.google.firebase:firebase-common:20.1.1] /home/theappideas/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
+188-->[com.google.firebase:firebase-common:20.1.1] /Users/p/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
 189            android:initOrder="100" />
-189-->[com.google.firebase:firebase-common:20.1.1] /home/theappideas/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
+189-->[com.google.firebase:firebase-common:20.1.1] /Users/p/.gradle/caches/transforms-3/f2404e28b09fda680b26eb543d342eac/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
 190
 191        <meta-data
-191-->[com.google.android.gms:play-services-basement:18.0.0] /home/theappideas/.gradle/caches/transforms-3/4916ac5b76716ffc0958ee8e642cb56d/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+191-->[com.google.android.gms:play-services-basement:18.0.0] /Users/p/.gradle/caches/transforms-3/4916ac5b76716ffc0958ee8e642cb56d/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
 192            android:name="com.google.android.gms.version"
-192-->[com.google.android.gms:play-services-basement:18.0.0] /home/theappideas/.gradle/caches/transforms-3/4916ac5b76716ffc0958ee8e642cb56d/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+192-->[com.google.android.gms:play-services-basement:18.0.0] /Users/p/.gradle/caches/transforms-3/4916ac5b76716ffc0958ee8e642cb56d/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
 193            android:value="@integer/google_play_services_version" />
-193-->[com.google.android.gms:play-services-basement:18.0.0] /home/theappideas/.gradle/caches/transforms-3/4916ac5b76716ffc0958ee8e642cb56d/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+193-->[com.google.android.gms:play-services-basement:18.0.0] /Users/p/.gradle/caches/transforms-3/4916ac5b76716ffc0958ee8e642cb56d/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
 194    </application>
 195
 196</manifest>

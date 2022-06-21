@@ -12,10 +12,11 @@ const styles = StyleSheet.create({
         width: hs(140),
         height: vs(140),
         resizeMode: 'contain',
-        marginTop: vs(40),
+        marginTop: vs(60),
     },
     text1: {
         fontSize: fs(16),
+        fontFamily:Fonts.regular,
         color: '#000',
         marginTop: vs(20)
     },
@@ -24,6 +25,7 @@ const styles = StyleSheet.create({
     },
     text2: {
         fontSize: fs(15),
+        fontFamily:Fonts.regular,
         textDecorationLine: 'underline',
         color: '#000'
     },
@@ -38,6 +40,7 @@ const styles = StyleSheet.create({
     },
     text4: {
         fontSize: fs(14),
+        fontFamily:Fonts.regular,
         color: '#009345',
         fontWeight: 'bold',
         marginLeft: hs(5)
@@ -67,13 +70,13 @@ const styles = StyleSheet.create({
     },
     phoneno_input:{
         width: '92%',
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(20),
     },
     password_input:{
         width: '92%',
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(10)
     },

@@ -13,6 +13,7 @@ import { editprofileApi } from "../../../utils/apiServices";
 import EditprofileModal from "../../../modals/EditProfileModal/EditProfileModal";
 import LoadingIndicator from "../../../components/LoadingIndicator";
 import { api_token } from "../../../utils/Globals";
+import ModalLoadingIndicator from "../../../components/ModalLoadingIndicator";
 
 const Editprofile = ({ navigation, route }) => {
 
@@ -25,7 +26,7 @@ const Editprofile = ({ navigation, route }) => {
         setPicture(profileDetails?.store_image || '');
     }, [])
 
-    console.log("details", profileDetails.store_image);
+    console.log("details", profileDetails);
     console.log("token of edit profile", api_token);
 
     const EditprofileSchema = yup.object({
@@ -107,7 +108,7 @@ const Editprofile = ({ navigation, route }) => {
                     validationSchema={EditprofileSchema}
                     onSubmit={EditprofileHandler}
                 >
-                    {({ handleChange, handleBlur, handleSubmit, values, errors, isValid }) => (
+                    {({ handleChange, handleBlur, handleSubmit, values, errors }) => (
                         <>
                             <Container containerStyle={styles.container3}>
                                 <Label style={styles.label}>Company Name</Label>

@@ -6,9 +6,11 @@ const styles = StyleSheet.create({
         // alignItems: 'flex-start'
     },
     Imgcontainer:{
-        // borderWidth: 1,
         width: screenWidth * 0.28,
-        height: vs(120),
+        marginHorizontal:hs(3.5),
+        marginTop:vs(7),
+        bottom:5,
+        height: vs( 120 ),
         borderColor: '#f2f2f2',
         borderRadius: 5,
         alignItems: 'center',

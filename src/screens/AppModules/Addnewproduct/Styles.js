@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     },
     label7:{
         fontSize: fs(14),
-        marginRight: hs(31)
+        marginRight: hs(23)
     },
     container7:{
         flexDirection: 'row',
@@ -64,12 +64,12 @@ const styles = StyleSheet.create({
     },
     container8:{
         borderWidth: 1,
-        width: screenWidth * 0.32,
+        width: screenWidth * 0.35,
         height: vs(50),
         marginTop: vs(10),
         borderRadius: 5,
         borderColor: '#f2f2f2',
-        marginLeft:hs(5)
+        marginLeft: hs(5)
     },
     container9:{
         flexDirection: 'row',
@@ -108,14 +108,14 @@ const styles = StyleSheet.create({
         lineHeight: 23,
     },
     price_input:{
-        width: screenWidth * 0.25,
+        width: screenWidth * 0.27,
         backgroundColor: '#fff',
         borderColor: '#F2f2f2',
         marginTop: vs(10),
         marginRight: hs(25)
     },
-    weight_input:{
-        width: "25%",
+    weight_input: {
+        width: "20%",
         backgroundColor: '#fff',
         borderColor: '#F2f2f2',
         marginTop: vs(10),

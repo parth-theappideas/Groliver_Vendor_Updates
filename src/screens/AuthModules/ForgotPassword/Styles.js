@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     },
     phno_input:{
         width: '92%',
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(20)
     },

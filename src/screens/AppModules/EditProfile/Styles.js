@@ -61,25 +61,25 @@ const styles = StyleSheet.create({
     },
     name_input: {
         width: screenWidth * 0.92,
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(10)
     },
     email_input: {
         width: screenWidth * 0.92,
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(10)
     },
     countrycode_input: {
         width: screenWidth * 0.92,
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(10)
     },
     mobileno_input: {
         width: screenWidth * 0.92,
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(10)
     },

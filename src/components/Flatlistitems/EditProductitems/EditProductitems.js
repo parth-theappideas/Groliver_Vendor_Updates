@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import { Image, FlatList, Pressable, ToastAndroid } from 'react-native'
-import Images from '../../../const/Images'
-import { removeImageApi } from '../../../utils/apiServices'
-import { vs } from '../../../utils/stylesUtils'
-import Container from '../../container'
-import styles from './styles'
+import React, { useState, useEffect } from 'react';
+import { Image, FlatList, Pressable } from 'react-native';
+import Images from '../../../const/Images';
+import { removeImageApi } from '../../../utils/apiServices';
+import { vs } from '../../../utils/stylesUtils';
+import Container from '../../container';
+import styles from './styles';
 
-const EditProductitems = ({ modalVisible, setModalVisible, picture, productDetails, image }) => {
+const EditProductitems = ( { modalVisible, setModalVisible, picture, productDetails, image } ) => {
 
     // const EditProductData = [
     //     {
@@ -62,27 +62,72 @@ const EditProductitems = ({ modalVisible, setModalVisible, picture, productDetai
     //     </>
     // )
 
-    return(
-        <Container>
-            <Container containerStyle={{ marginTop: vs(10) }} onPress={() => setModalVisible(!modalVisible)}>
-                <Container containerStyle={styles.Imgcontainer}>
-                    <Image
-                        source={{ uri: picture || 'dummy' }}
-                        style={picture ? styles.Clickimg : styles.add_img}
-                    />
-                    {image.image ?
-                        <Pressable style={styles.pressableBtn}>
-                            <Image
-                                source={Images.del2}
-                                style={styles.del_img}
-                            />
-                        </Pressable>
-                        : null}
+    const EditProductData = [
+        {
+            id: 1,
+            add_img: require( '../../../assets/images/plus.png' )
+        },
+        {
+            id: 2,
+            add_img: require( '../../../assets/images/plus.png' )
+        },
+        {
+            id: 3,
+            add_img: require( '../../../assets/images/plus.png' )
+        },
+        {
+            id: 4,
+            add_img: require( '../../../assets/images/plus.png' )
+        },
+        {
+            id: 5,
+            add_img: require( '../../../assets/images/plus.png' )
+        },
+    ];
+
+    return (
+        // <Container containerStyle={ { marginTop: vs( 10 ) } } onPress={ () => setModalVisible( !modalVisible ) }>
+        //     <Container containerStyle={ styles.Imgcontainer }>
+        //         <Image
+        //             source={ { uri: picture || 'dummy' } }
+        //             style={ picture ? styles.Clickimg : styles.add_img }
+        //         />
+        //         { image.image ?
+        //             <Pressable style={ styles.pressableBtn }>
+        //                 <Image
+        //                     source={ Images.del2 }
+        //                     style={ styles.del_img }
+        //                 />
+        //             </Pressable>
+        //             : null }
+        //     </Container>
+        // </Container>
+
+        <FlatList
+            keyExtractor={ ( item ) => item.id }
+            data={ EditProductData }
+            numColumns={ 3 }
+            renderItem={ () => (
+                <Container onPress={ () => setModalVisible( !modalVisible ) }>
+                    <Container containerStyle={ styles.Imgcontainer }>
+                        <Image
+                            source={ { uri: picture || 'dummy' } }
+                            style={ picture ? styles.Clickimg : styles.add_img }
+                        />
+                        { image.image ?
+                            <Pressable style={ styles.pressableBtn }>
+                                <Image
+                                    source={ Images.del2 }
+                                    style={ styles.del_img }
+                                />
+                            </Pressable>
+                            : null }
+                    </Container>
                 </Container>
-            </Container>
-        </Container>
-    )
-}
+            ) }
+        />
+    );
+};
 
 export default EditProductitems;
 

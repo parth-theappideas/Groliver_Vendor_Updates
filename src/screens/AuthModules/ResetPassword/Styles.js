@@ -24,13 +24,13 @@ const styles = StyleSheet.create({
     },
     newpsw_input:{
         width: '92%',
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(20)
     },
     confirmpsw_input:{
         width: '92%',
-        backgroundColor: '#fff',
+        backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(10)
     },

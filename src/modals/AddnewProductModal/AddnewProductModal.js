@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useRef,useEffect } from 'react'
 import { Modal, Image } from 'react-native'
 import Container from '../../components/container';
 import Label from '../../components/Label';
@@ -9,6 +9,16 @@ import styles from './styles';
 const AddnewProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
 
     const [Loading, setLoading] = useState(false);
+    const ref = useRef();
+
+    useEffect(()=>{
+        const ClickedOutSide = (e) => {
+            if(ref.current && !ref.current(e.target)){
+                onClose()
+            }
+        }
+       ClickedOutSide()
+    })
 
     const Camerafile = () => {
         let Options = {
@@ -24,6 +34,7 @@ const AddnewProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
             } else if (response.errorCode) {
                 console.log('Image error', response.errorCode);
             } else {
+                console.log("response:",response);
                 const ImageAccess = response.assets[0].uri
                 setPicture(ImageAccess);
                 setModalVisible(!modalVisible);
@@ -55,15 +66,17 @@ const AddnewProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
         })
     }
 
+    const onClose = () => {
+        setModalVisible(!modalVisible);
+    }
+
     return (
         <Container containerStyle={styles.container}>
             <Modal
                 animationType="slide"
                 transparent={true}
                 visible={modalVisible}
-                onRequestClose={() => {
-                    setModalVisible(!modalVisible);
-                }}
+                onRequestClose={onClose}
                 statusBarTranslucent={true}
             >
                 <Container containerStyle={styles.container2}>
