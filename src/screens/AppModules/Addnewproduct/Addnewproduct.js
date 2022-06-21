@@ -14,6 +14,7 @@ import AddnewProductModal from "../../../modals/AddnewProductModal/AddnewProduct
 import AddnewProductitems from "../../../components/Flatlistitems/AddnewProductitems/AddnewProductitems";
 import { catApi, subCatApi } from "../../../utils/apigetService";
 import LoadingIndicator from "../../../components/LoadingIndicator";
+import ModalLoadingIndicator from "../../../components/ModalLoadingIndicator";
 
 const WeightValues = [
     {
@@ -38,44 +39,21 @@ const WeightValues = [
     }
 ];
 
-const categoryValues = [
-    {
-        id: 1,
-        category_name: 'Grocery'
-    },
-    {
-        id: 2,
-        category_name: 'Fashion'
-    },
-    {
-        id: 3,
-        category_name: 'Random'
-    },
-    {
-        id: 4,
-        category_name: 'Spices'
-    },
-    {
-        id: 6,
-        category_name: 'Dry Fruits'
-    },
-    {
-        id: 7,
-        category_name: 'Fruits & Vegetables'
-    }
-];
-
 const Addnewproduct = ({ navigation }) => {
 
     const [modalVisible, setModalVisible] = useState(false);
     const [picture, setPicture] = useState('');
     const [catData, setCatData] = useState({});
     const [catList, setCatList] = useState([]);
-    const [subCatData, setSubCatData] = useState({});
+    const [subCatData, setSubCatData] = useState();
     const [subCatList, setSubCatList] = useState([]);
     const [weightData, setWeightData] = useState(WeightValues[0].wt_name);
     const [Loading, setLoading] = useState(false);
 
+    console.log("catdata",catData);
+    console.log("catlist",catList);
+    console.log("subcat",subCatData);
+    
     const AddnewproductSchema = yup.object({
         title: yup
             .string()
@@ -177,7 +155,6 @@ const Addnewproduct = ({ navigation }) => {
                     modalVisible={modalVisible}
                     setModalVisible={setModalVisible}
                     picture={picture}
-                    setPicture={setPicture}
                 />
                 <Formik
                     initialValues={{
@@ -191,14 +168,6 @@ const Addnewproduct = ({ navigation }) => {
                     }}
                     validationSchema={AddnewproductSchema}
                     onSubmit={AddnewproductHandler}
-                // validate={(values) => {
-                //     let errors = {};
-                //     if (!values) {
-                //         errors.title = "Required";
-                //         errors.price = "Required";  
-                //     }
-                //     return errors;
-                // }}
                 >
                     {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
                         <>
@@ -258,12 +227,12 @@ const Addnewproduct = ({ navigation }) => {
                                     inputHeight={50}
                                     textSize={14}
                                 />
-                                {touched.title && errors.title && <Label style={{
+                                {touched.title && errors.title ? (<Label style={{
                                     color: 'red',
                                     fontSize: fs(12),
                                     marginTop: vs(5),
                                     marginLeft: hs(2)
-                                }}>{errors.title}</Label>}
+                                }}>{errors.title}</Label>):null}
                             </Container>
 
                             <Container containerStyle={styles.container4}>
@@ -343,21 +312,21 @@ const Addnewproduct = ({ navigation }) => {
                                 flexDirection: 'row',
                                 justifyContent: 'space-around'
                             }}>
-                                {touched.price && errors.price && <Label style={{
+                                {touched.price && errors.price ? (<Label style={{
                                     color: 'red',
                                     fontSize: fs(12),
                                     marginTop: vs(5),
                                     marginLeft: hs(2),
                                     position: 'absolute',
                                     left: 0
-                                }}>{errors.price}</Label>}
+                                }}>{errors.price}</Label>):null}
 
-                                {touched.weight && errors.weight && <Label style={{
+                                {touched.weight && errors.weight ? (<Label style={{
                                     color: 'red',
                                     fontSize: fs(12),
                                     marginTop: vs(5),
                                     marginRight: hs(20),
-                                }}>{errors.weight}</Label>}
+                                }}>{errors.weight}</Label>):null}
                             </Container>
 
                             <Container containerStyle={styles.container9}>
@@ -399,19 +368,19 @@ const Addnewproduct = ({ navigation }) => {
                                 flexDirection: 'row',
                                 justifyContent: 'space-between'
                             }}>
-                                {touched.discount && errors.discount && <Label style={{
+                                {touched.discount && errors.discount ? (<Label style={{
                                     color: 'red',
                                     fontSize: fs(12),
                                     position: 'absolute',
                                     left: 0
-                                }}>{errors.discount}</Label>}
+                                }}>{errors.discount}</Label>):null}
 
-                                {touched.stock && errors.stock && <Label style={{
+                                {touched.stock && errors.stock ? (<Label style={{
                                     color: 'red',
                                     fontSize: fs(12),
                                     position: 'absolute',
                                     right: 0
-                                }}>{errors.stock}</Label>}
+                                }}>{errors.stock}</Label>):null}
                             </Container>
 
                             <Btn
@@ -419,7 +388,7 @@ const Addnewproduct = ({ navigation }) => {
                                 btnStyle={styles.add_btn}
                                 btnHeight={50}
                                 textColor={'white'}
-                                textSize={14}
+                                textSize={15}
                                 onPress={handleSubmit}
                             />
                         </>
@@ -432,7 +401,7 @@ const Addnewproduct = ({ navigation }) => {
                 setModalVisible={setModalVisible}
                 setPicture={setPicture}
             />
-            {Loading ? <LoadingIndicator /> : null}
+            {Loading ? <ModalLoadingIndicator /> : null}
         </ScrollView>
     )
 }
