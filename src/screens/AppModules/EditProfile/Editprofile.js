@@ -13,7 +13,6 @@ import { editprofileApi } from "../../../utils/apiServices";
 import EditprofileModal from "../../../modals/EditProfileModal/EditProfileModal";
 import LoadingIndicator from "../../../components/LoadingIndicator";
 import { api_token } from "../../../utils/Globals";
-import ModalLoadingIndicator from "../../../components/ModalLoadingIndicator";
 
 const Editprofile = ({ navigation, route }) => {
 
