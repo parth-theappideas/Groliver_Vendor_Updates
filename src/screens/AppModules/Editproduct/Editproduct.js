@@ -51,8 +51,8 @@ const EditProduct = ( { navigation, route } ) => {
 
     const [ modalVisible, setModalVisible ] = useState( false );
     const [ picture, setPicture ] = useState( '' );
-    const [ catData, setCatData ] = useState( `${ productDetails.category.name }` );
-    const [ subCatData, setSubCatData ] = useState( {} );
+    const [ catData, setCatData ] = useState( {} );
+    const [ subCatData, setSubCatData ] = useState( productDetails.sub_category.name );
     const [ catList, setCatList ] = useState( [] );
     const [ subCatList, setSubCatList ] = useState( [] );
     const [ Loading, setLoading ] = useState( false );
@@ -64,6 +64,8 @@ const EditProduct = ( { navigation, route } ) => {
         setPicture( image?.image || '' );
     }, [] );
 
+    console.log("sub",productDetails.sub_category.name);
+        
     const EditProductSchema = yup.object( {
         title: yup
             .string(),
@@ -169,8 +171,11 @@ const EditProduct = ( { navigation, route } ) => {
     async function subCategotyList () {
         let result = await subCatApi( { method: 'get' } );
         console.log( "SubCategory result", result.data );
-        if ( result?.data ) {
-            setSubCatList( result.data );
+        // if ( result?.data ) {
+        //     setSubCatList( result.data );
+        // }
+        if(catData.id){
+            setSubCatList(result.data)
         }
     }
 

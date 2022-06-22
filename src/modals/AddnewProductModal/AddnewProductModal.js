@@ -97,7 +97,7 @@ const AddnewProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
                                     />
                                 </Container>
                             </Container>
-                        </Container>
+                        </Container>w
 
                         <Container containerStyle={styles.border2} />
 
