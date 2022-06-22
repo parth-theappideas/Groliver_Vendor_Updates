@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     },
     container2: {
         marginLeft: hs(10),
+        marginTop:vs(3)
     },
     label: {
         fontSize: fs(14),
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     label4: {
         position: 'absolute',
         right: hs(20),
-        top: vs(27),
+        top: vs(24),
         bottom: vs(0),
         fontWeight: 'bold',
         color: '#000',

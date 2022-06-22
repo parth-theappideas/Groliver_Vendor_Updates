@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { ScrollView, ToastAndroid, StatusBar, View } from 'react-native'
+import { ScrollView, ToastAndroid, StatusBar, View } from 'react-native';
 import { fs, hs, screenWidth, vs } from "../../../utils/stylesUtils";
 import InputBox from "../../../components/InputBox";
-import { Picker } from '@react-native-picker/picker'
+import { Picker } from '@react-native-picker/picker';
 import Btn from "../../../components/Btn";
 import Container from "../../../components/container";
 import Label from "../../../components/Label";
 import styles from "./Styles";
 import { Formik } from "formik";
-import * as yup from 'yup'
+import * as yup from 'yup';
 import { addnewproductApi } from "../../../utils/apiServices";
 import AddnewProductModal from "../../../modals/AddnewProductModal/AddnewProductModal";
 import AddnewProductitems from "../../../components/Flatlistitems/AddnewProductitems/AddnewProductitems";
@@ -39,125 +39,132 @@ const WeightValues = [
     }
 ];
 
-const Addnewproduct = ({ navigation }) => {
+const Addnewproduct = ( { navigation } ) => {
 
-    const [modalVisible, setModalVisible] = useState(false);
-    const [picture, setPicture] = useState('');
-    const [catData, setCatData] = useState({});
-    const [catList, setCatList] = useState([]);
-    const [subCatData, setSubCatData] = useState();
-    const [subCatList, setSubCatList] = useState([]);
-    const [weightData, setWeightData] = useState(WeightValues[0].wt_name);
-    const [Loading, setLoading] = useState(false);
+    const [ modalVisible, setModalVisible ] = useState( false );
+    const [ picture, setPicture ] = useState( '' );
+    const [ catData, setCatData ] = useState( {} );
+    const [ catList, setCatList ] = useState( [] );
+    const [ subCatData, setSubCatData ] = useState();
+    const [ subCatList, setSubCatList ] = useState( [] );
+    const [ weightData, setWeightData ] = useState( WeightValues[ 0 ].wt_name );
+    const [ Loading, setLoading ] = useState( false );
 
-    console.log("catdata",catData);
-    console.log("catlist",catList);
-    console.log("subcat",subCatData);
-    
-    const AddnewproductSchema = yup.object({
+    console.log( "catdata", catData );
+    console.log( "catlist", catList );
+    console.log( "subcat", subCatData );
+
+    const AddnewproductSchema = yup.object( {
         title: yup
             .string()
-            .required("Required *"),
+            .required( "Required *" ),
         description: yup
             .string(),
         price: yup
             .number()
-            .required("Required *"),
+            .required( "Required *" ),
         weight: yup
             .number()
-            .required("Required *"),
+            .required( "Required *" ),
         discount: yup
             .number()
-            .max(1000, "Not Valid Number !"),
+            .max( 1000, "Not Valid Number !" ),
         stock: yup
             .number()
-            .required("Required *"),
-    })
+            .required( "Required *" ),
+    } );
 
-    async function AddnewproductHandler(values) {
-        console.log("values==>", values);
-        setLoading(true);
+    async function AddnewproductHandler ( values ) {
+        console.log( "values==>", values );
+        setLoading( true );
 
         var formData = new FormData();
-        let file_name = picture?.substring(picture?.lastIndexOf('/') + 1);
-        formData.append("name", values.title);
-        formData.append("price", values.price);
-        formData.append("weight", values.weight);
-        formData.append("cat_id", catData.id)
-        formData.append("sub_cat_id", subCatData.id);
-        formData.append("stock", values.stock);
-        formData.append("flag", "v");
-        formData.append("discount", values.discount);
-        formData.append("description", values.description);
-        if (values.discount) {
-            formData.append("offer_flag", "y");
-        } else if (!values.discount) {
-            formData.append("offer_flag", "");
+        let file_name = picture?.substring( picture?.lastIndexOf( '/' ) + 1 );
+        formData.append( "name", values.title );
+        formData.append( "price", values.price );
+        formData.append( "weight", values.weight );
+        formData.append( "cat_id", catData.id );
+        formData.append( "sub_cat_id", subCatData.id );
+        formData.append( "stock", values.stock );
+        formData.append( "flag", "v" );
+        formData.append( "discount", values.discount );
+        formData.append( "description", values.description );
+        if ( values.discount ) {
+            formData.append( "offer_flag", "y" );
+        } else if ( !values.discount ) {
+            formData.append( "offer_flag", "" );
         } else {
-            console.log("Something wrong");
+            console.log( "Something wrong" );
         }
-        formData.append("unit", weightData);
-        formData.append("image[]", {
+        formData.append( "unit", weightData );
+        formData.append( "image[]", {
             uri: picture,
             name: file_name,
             type: 'image/jpg'
-        });
-        console.log("Formdata=>", formData);
+        } );
+        console.log( "Formdata=>", formData );
 
         try {
-            let response = await addnewproductApi({ data: formData })
-            console.log("response", response);
-            setLoading(false);
-            if (response.status == 'Success') {
-                navigation.navigate("Myproducts", {
+            let response = await addnewproductApi( { data: formData } );
+            console.log( "response", response );
+            setLoading( false );
+            if ( response.status == 'Success' ) {
+                navigation.navigate( "Myproducts", {
                     fromAddProduct: true,
-                })
-                ToastAndroid.show("Products add Successfully", ToastAndroid.SHORT);
+                } );
+                ToastAndroid.show( "Products add Successfully", ToastAndroid.SHORT );
             } else {
-                alert(response.message);
+                alert( response.message );
             }
-        } catch (error) {
-            alert("You are miss something image uploading or input field", error);
-            setLoading(false);
+        } catch ( error ) {
+            alert( "You are miss something image uploading or input field", error );
+            setLoading( false );
         }
     }
 
-    async function categotyList() {
-        let result = await catApi({ method: 'get' })
-        console.log("result", result.data);
-        if (result?.data) {
-            setCatList(result.data);
-        }
-    }
-
-    async function subCategotyList() {
-        let result = await subCatApi({ method: 'get' })
-        console.log("result sub_cat", result.data);
-        if (result?.data) {
-            setSubCatList(result.data);
-        }
-    }
-
-    useEffect(() => {
+    useEffect( () => {
         categotyList();
-        subCategotyList();
-    }, []);
+    }, [] );
+
+    async function categotyList () {
+        let result = await catApi( { method: 'get' } );
+        console.log( "result", result.data );
+        if ( result?.data ) {
+            setCatList( result.data );
+        }
+    }
+
+    const SelectCategory = async ( itemValue ) => {
+        console.log("itemvalues",itemValue);
+        setCatData( itemValue );
+        let result = await subCatApi( { id : itemValue.id } );
+        console.log( "response", result );
+        setSubCatList(result.data);
+    };
+
+    // async function subCategotyList () {
+    //     let result = await subCatApi( { method: 'get' } );
+    //     console.log( "result sub_cat", result.data );
+    //     if ( result?.data ) {
+    //         setSubCatList( result.data );
+    //     }
+    // }
 
     return (
-        <ScrollView style={{
+        <ScrollView style={ {
             backgroundColor: 'white'
-        }} contentContainerStyle={{
-            paddingBottom: vs(50)
-        }}>
+        } } contentContainerStyle={ {
+            paddingBottom: vs( 50 )
+        } }>
             <StatusBar backgroundColor="white" barStyle="dark-content" />
-            <Container containerStyle={styles.container}>
+            <Container containerStyle={ styles.container }>
                 <AddnewProductitems
-                    modalVisible={modalVisible}
-                    setModalVisible={setModalVisible}
-                    picture={picture}
+                    modalVisible={ modalVisible }
+                    setModalVisible={ setModalVisible }
+                    picture={ picture }
                 />
                 <Formik
-                    initialValues={{
+                    initialValues={ {
                         title: '',
                         description: '',
                         price: '',
@@ -165,245 +172,245 @@ const Addnewproduct = ({ navigation }) => {
                         weight_unit: '',
                         discount: '',
                         stock: ''
-                    }}
-                    validationSchema={AddnewproductSchema}
-                    onSubmit={AddnewproductHandler}
+                    } }
+                    validationSchema={ AddnewproductSchema }
+                    onSubmit={ AddnewproductHandler }
                 >
-                    {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
+                    { ( { handleChange, handleBlur, handleSubmit, values, errors, touched } ) => (
                         <>
-                            <Container containerStyle={styles.container4}>
-                                <Label style={styles.label}>Category</Label>
-                                <Container containerStyle={styles.container5}>
+                            <Container containerStyle={ styles.container4 }>
+                                <Label style={ styles.label }>Category</Label>
+                                <Container containerStyle={ styles.container5 }>
                                     <Picker
-                                        style={styles.picker_style}
-                                        selectedValue={catData}
-                                        onValueChange={(itemValue) => setCatData(itemValue)}
+                                        style={ styles.picker_style }
+                                        selectedValue={ catData }
+                                        onValueChange={ SelectCategory }
                                     >
                                         {
-                                            catList.map((item, index) => {
+                                            catList.map( ( item, index ) => {
                                                 return (
-                                                    <Picker.Item label={item.name} key={index}
-                                                        style={styles.picker_item} value={item} />
-                                                )
-                                            })
+                                                    <Picker.Item label={ item.name } key={ index }
+                                                        style={ styles.picker_item } value={ item } />
+                                                );
+                                            } )
                                         }
                                     </Picker>
                                 </Container>
 
-                                <Label style={[styles.label, styles.extraLabel]}>Sub-Categories</Label>
-                                <Container containerStyle={styles.container5}>
+                                <Label style={ [ styles.label, styles.extraLabel ] }>Sub-Categories</Label>
+                                <Container containerStyle={ styles.container5 }>
                                     <Picker
-                                        style={styles.picker_style}
-                                        selectedValue={subCatData}
-                                        onValueChange={(itemValue) => setSubCatData(itemValue)}
+                                        style={ styles.picker_style }
+                                        selectedValue={ subCatData }
+                                        onValueChange={ ( itemValue ) => setSubCatData( itemValue ) }
                                     >
                                         {
-                                            subCatList.map((item, index) => {
+                                            subCatList.map( ( item, index ) => {
                                                 return (
                                                     <Picker.Item
-                                                        label={item.name}
-                                                        key={index}
-                                                        style={styles.picker_item}
-                                                        value={item}
+                                                        label={ item.name }
+                                                        key={ index }
+                                                        style={ styles.picker_item }
+                                                        value={ item }
                                                     />
-                                                )
-                                            })
+                                                );
+                                            } )
                                         }
                                     </Picker>
                                 </Container>
                             </Container>
 
-                            <Container containerStyle={styles.container4}>
-                                <Label style={styles.label}>Title</Label>
+                            <Container containerStyle={ styles.container4 }>
+                                <Label style={ styles.label }>Title</Label>
                                 <InputBox
                                     placeholder="Type here..."
-                                    inputStyle={{
+                                    inputStyle={ {
                                         maxWidth: '75%'
-                                    }}
-                                    containerStyle={styles.title_input}
-                                    onChangeText={handleChange('title')}
-                                    onBlur={handleBlur('title')}
-                                    value={values.title}
-                                    inputHeight={50}
-                                    textSize={14}
+                                    } }
+                                    containerStyle={ styles.title_input }
+                                    onChangeText={ handleChange( 'title' ) }
+                                    onBlur={ handleBlur( 'title' ) }
+                                    value={ values.title }
+                                    inputHeight={ 50 }
+                                    textSize={ 14 }
                                 />
-                                {touched.title && errors.title ? (<Label style={{
+                                { touched.title && errors.title ? ( <Label style={ {
                                     color: 'red',
-                                    fontSize: fs(12),
-                                    marginTop: vs(5),
-                                    marginLeft: hs(2)
-                                }}>{errors.title}</Label>):null}
+                                    fontSize: fs( 12 ),
+                                    marginTop: vs( 5 ),
+                                    marginLeft: hs( 2 )
+                                } }>{ errors.title }</Label> ) : null }
                             </Container>
 
-                            <Container containerStyle={styles.container4}>
-                                <Label style={styles.label}>Description</Label>
+                            <Container containerStyle={ styles.container4 }>
+                                <Label style={ styles.label }>Description</Label>
                                 <InputBox
                                     placeholder="Type here..."
-                                    inputStyle={{
+                                    inputStyle={ {
                                         maxWidth: '75%',
-                                    }}
-                                    placeholderStyle={{
+                                    } }
+                                    placeholderStyle={ {
                                         position: 'absolute',
                                         top: 0,
-                                    }}
-                                    multiline={true}
-                                    containerStyle={styles.description_input}
-                                    onChangeText={handleChange('description')}
-                                    onBlur={handleBlur('description')}
-                                    value={values.description}
-                                    inputHeight={80}
-                                    textSize={14}
+                                    } }
+                                    multiline={ true }
+                                    containerStyle={ styles.description_input }
+                                    onChangeText={ handleChange( 'description' ) }
+                                    onBlur={ handleBlur( 'description' ) }
+                                    value={ values.description }
+                                    inputHeight={ 80 }
+                                    textSize={ 14 }
                                 />
                             </Container>
 
-                            <Container containerStyle={styles.container6}>
-                                <Label style={styles.label6}>Price</Label>
-                                <Label style={styles.label7}>Weight</Label>
+                            <Container containerStyle={ styles.container6 }>
+                                <Label style={ styles.label6 }>Price</Label>
+                                <Label style={ styles.label7 }>Weight</Label>
                             </Container>
 
-                            <Container containerStyle={styles.container7}>
+                            <Container containerStyle={ styles.container7 }>
                                 <InputBox
                                     placeholder="Price"
-                                    inputStyle={{
+                                    inputStyle={ {
                                         maxWidth: '75%',
-                                    }}
-                                    containerStyle={styles.price_input}
-                                    onChangeText={handleChange('price')}
-                                    onBlur={handleBlur('price')}
-                                    value={values.price}
+                                    } }
+                                    containerStyle={ styles.price_input }
+                                    onChangeText={ handleChange( 'price' ) }
+                                    onBlur={ handleBlur( 'price' ) }
+                                    value={ values.price }
                                     keyboardType="numeric"
-                                    inputHeight={50}
-                                    textSize={14}
+                                    inputHeight={ 50 }
+                                    textSize={ 14 }
                                 />
                                 <InputBox
                                     placeholder="Weight"
-                                    inputStyle={{
+                                    inputStyle={ {
                                         maxWidth: '75%',
-                                    }}
-                                    containerStyle={styles.weight_input}
-                                    onChangeText={handleChange('weight')}
-                                    onBlur={handleBlur('weight')}
-                                    value={values.weight}
+                                    } }
+                                    containerStyle={ styles.weight_input }
+                                    onChangeText={ handleChange( 'weight' ) }
+                                    onBlur={ handleBlur( 'weight' ) }
+                                    value={ values.weight }
                                     keyboardType="numeric"
-                                    inputHeight={50}
-                                    textSize={14}
+                                    inputHeight={ 50 }
+                                    textSize={ 14 }
                                 />
-                                <Container containerStyle={styles.container8}>
+                                <Container containerStyle={ styles.container8 }>
                                     <Picker
-                                        style={styles.picker_wt}
-                                        selectedValue={weightData}
-                                        onValueChange={(itemValue) => setWeightData(itemValue)}
+                                        style={ styles.picker_wt }
+                                        selectedValue={ weightData }
+                                        onValueChange={ ( itemValue ) => setWeightData( itemValue ) }
                                     >
-                                        {WeightValues.map((item, index) => {
+                                        { WeightValues.map( ( item, index ) => {
                                             return (
                                                 <Picker.Item
-                                                    label={item.wt_name}
-                                                    style={styles.picker_item}
-                                                    value={item.wt_name}
-                                                    key={index} />
-                                            )
-                                        })
+                                                    label={ item.wt_name }
+                                                    style={ styles.picker_item }
+                                                    value={ item.wt_name }
+                                                    key={ index } />
+                                            );
+                                        } )
                                         }
                                     </Picker>
                                 </Container>
                             </Container>
 
-                            <Container containerStyle={{
+                            <Container containerStyle={ {
                                 flexDirection: 'row',
                                 justifyContent: 'space-around'
-                            }}>
-                                {touched.price && errors.price ? (<Label style={{
+                            } }>
+                                { touched.price && errors.price ? ( <Label style={ {
                                     color: 'red',
-                                    fontSize: fs(12),
-                                    marginTop: vs(5),
-                                    marginLeft: hs(2),
+                                    fontSize: fs( 12 ),
+                                    marginTop: vs( 5 ),
+                                    marginLeft: hs( 2 ),
                                     position: 'absolute',
                                     left: 0
-                                }}>{errors.price}</Label>):null}
+                                } }>{ errors.price }</Label> ) : null }
 
-                                {touched.weight && errors.weight ? (<Label style={{
+                                { touched.weight && errors.weight ? ( <Label style={ {
                                     color: 'red',
-                                    fontSize: fs(12),
-                                    marginTop: vs(5),
-                                    marginRight: hs(20),
-                                }}>{errors.weight}</Label>):null}
+                                    fontSize: fs( 12 ),
+                                    marginTop: vs( 5 ),
+                                    marginRight: hs( 20 ),
+                                } }>{ errors.weight }</Label> ) : null }
                             </Container>
 
-                            <Container containerStyle={styles.container9}>
-                                <Label style={styles.label4}>Discount</Label>
-                                <Label style={styles.label5}>Stock</Label>
+                            <Container containerStyle={ styles.container9 }>
+                                <Label style={ styles.label4 }>Discount</Label>
+                                <Label style={ styles.label5 }>Stock</Label>
                             </Container>
 
-                            <Container containerStyle={styles.container10}>
+                            <Container containerStyle={ styles.container10 }>
                                 <InputBox
                                     placeholder="Discount"
-                                    inputStyle={{
+                                    inputStyle={ {
                                         maxWidth: '75%'
-                                    }}
-                                    containerStyle={styles.discount_input}
-                                    onChangeText={handleChange('discount')}
-                                    onBlur={handleBlur('discount')}
-                                    value={values.discount}
+                                    } }
+                                    containerStyle={ styles.discount_input }
+                                    onChangeText={ handleChange( 'discount' ) }
+                                    onBlur={ handleBlur( 'discount' ) }
+                                    value={ values.discount }
                                     keyboardType="numeric"
-                                    inputHeight={50}
-                                    textSize={14}
+                                    inputHeight={ 50 }
+                                    textSize={ 14 }
                                 />
                                 <InputBox
                                     placeholder="Stock"
-                                    inputStyle={{
+                                    inputStyle={ {
                                         maxWidth: '75%'
-                                    }}
-                                    containerStyle={styles.stock_input}
-                                    onChangeText={handleChange('stock')}
-                                    onBlur={handleBlur('stock')}
-                                    value={values.stock}
+                                    } }
+                                    containerStyle={ styles.stock_input }
+                                    onChangeText={ handleChange( 'stock' ) }
+                                    onBlur={ handleBlur( 'stock' ) }
+                                    value={ values.stock }
                                     keyboardType="numeric"
-                                    inputHeight={50}
-                                    textSize={14}
+                                    inputHeight={ 50 }
+                                    textSize={ 14 }
                                 />
                             </Container>
 
-                            <Container containerStyle={{
-                                marginTop: vs(5),
+                            <Container containerStyle={ {
+                                marginTop: vs( 5 ),
                                 flexDirection: 'row',
                                 justifyContent: 'space-between'
-                            }}>
-                                {touched.discount && errors.discount ? (<Label style={{
+                            } }>
+                                { touched.discount && errors.discount ? ( <Label style={ {
                                     color: 'red',
-                                    fontSize: fs(12),
+                                    fontSize: fs( 12 ),
                                     position: 'absolute',
                                     left: 0
-                                }}>{errors.discount}</Label>):null}
+                                } }>{ errors.discount }</Label> ) : null }
 
-                                {touched.stock && errors.stock ? (<Label style={{
+                                { touched.stock && errors.stock ? ( <Label style={ {
                                     color: 'red',
-                                    fontSize: fs(12),
+                                    fontSize: fs( 12 ),
                                     position: 'absolute',
                                     right: 0
-                                }}>{errors.stock}</Label>):null}
+                                } }>{ errors.stock }</Label> ) : null }
                             </Container>
 
                             <Btn
                                 title="Add"
-                                btnStyle={styles.add_btn}
-                                btnHeight={50}
-                                textColor={'white'}
-                                textSize={15}
-                                onPress={handleSubmit}
+                                btnStyle={ styles.add_btn }
+                                btnHeight={ 50 }
+                                textColor={ 'white' }
+                                textSize={ 15 }
+                                onPress={ handleSubmit }
                             />
                         </>
-                    )}
+                    ) }
                 </Formik>
             </Container>
 
             <AddnewProductModal
-                modalVisible={modalVisible}
-                setModalVisible={setModalVisible}
-                setPicture={setPicture}
+                modalVisible={ modalVisible }
+                setModalVisible={ setModalVisible }
+                setPicture={ setPicture }
             />
-            {Loading ? <ModalLoadingIndicator /> : null}
+            { Loading ? <ModalLoadingIndicator /> : null }
         </ScrollView>
-    )
-}
+    );
+};
 
 export default Addnewproduct;

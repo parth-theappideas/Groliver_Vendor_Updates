@@ -64,8 +64,8 @@ const EditProduct = ( { navigation, route } ) => {
         setPicture( image?.image || '' );
     }, [] );
 
-    console.log("sub",productDetails.sub_category.name);
-        
+    console.log( "sub", productDetails.sub_category.name );
+
     const EditProductSchema = yup.object( {
         title: yup
             .string(),
@@ -157,7 +157,6 @@ const EditProduct = ( { navigation, route } ) => {
 
     useEffect( () => {
         categotyList();
-        subCategotyList();
     }, [] );
 
     async function categotyList () {
@@ -168,16 +167,21 @@ const EditProduct = ( { navigation, route } ) => {
         }
     }
 
-    async function subCategotyList () {
-        let result = await subCatApi( { method: 'get' } );
-        console.log( "SubCategory result", result.data );
-        // if ( result?.data ) {
-        //     setSubCatList( result.data );
-        // }
-        if(catData.id){
-            setSubCatList(result.data)
-        }
-    }
+    const SelectCategoryHandler = async ( itemValue ) => {
+        console.log( "itemvalues", itemValue );
+        setCatData( itemValue );
+        let result = await subCatApi( { id: itemValue.id } );
+        console.log( "response:", result );
+        setSubCatList( result.data );
+    };
+
+    // async function subCategotyList () {
+    //     let result = await subCatApi( { method: 'get' } );
+    //     console.log( "SubCategory result", result.data );
+    //     if ( result?.data ) {
+    //         setSubCatList( result.data );
+    //     }
+    // }
 
     return (
         <ScrollView style={ {
@@ -234,7 +238,7 @@ const EditProduct = ( { navigation, route } ) => {
                                     <Picker
                                         style={ styles.picker_style }
                                         selectedValue={ catData }
-                                        onValueChange={ ( itemValue ) => setCatData( itemValue ) }
+                                        onValueChange={ SelectCategoryHandler }
                                     >
                                         {
                                             catList.map( ( item, index ) => {

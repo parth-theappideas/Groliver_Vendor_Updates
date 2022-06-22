@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         marginTop: vs(20)
     },
     label1: {
-        fontSize: fs(17),
+        fontSize: fs(18),
         color: '#000',
         fontWeight: 'bold'
     },
@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
         marginTop: vs(15)
     },
     label2: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         color: '#000',
         fontWeight: 'bold'
     },
     label3: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         marginTop: vs(1)
     },
     container4: {
@@ -33,12 +33,12 @@ const styles = StyleSheet.create({
         marginTop: vs(15)
     },
     label4: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         color: '#000',
         fontWeight: 'bold'
     },
     label5: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         marginTop: vs(1)
     },
     container5: {
@@ -46,12 +46,12 @@ const styles = StyleSheet.create({
         marginTop: vs(15)
     },
     label6: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         color: '#000',
         fontWeight: 'bold'
     },
     label7: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         marginTop: vs(1)
     },
     container6: {
@@ -79,12 +79,12 @@ const styles = StyleSheet.create({
         marginTop: vs(25)
     },
     label8: {
-        fontSize: fs(17),
+        fontSize: fs(18),
         color: '#000',
         fontWeight: 'bold'
     },
     label9: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         marginTop: vs(10)
     },
     label10: {

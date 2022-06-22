@@ -52,7 +52,7 @@ const AddnewProductitems = ( { modalVisible, setModalVisible, picture } ) => {
                 data={ AddProductData }
                 numColumns={ 3 }
                 renderItem={ ( { item } ) => (
-                    <Container onPress={ () => setModalVisible( !modalVisible ) } key={ item.id }>
+                    <Container onPress={ () => setModalVisible( !modalVisible ) }>
                         <Container containerStyle={ styles.container }>
                             <Container containerStyle={ styles.container2 }>
                                 <Image

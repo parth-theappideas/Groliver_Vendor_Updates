@@ -14,7 +14,7 @@ export const endPoints = {
     idproof:'upload-id-document',
     uploadStatus:'document-status',
     category:'category',
-    subCategory:'sub-category/3',
+    subCategory:'sub-category',
     myProduct:'product?limit=10&sort=id&order=asc&page=1&cat_id=&sub_cat_id=',
     myProductDetails:'product-detail',
     editProduct:'edit-product',

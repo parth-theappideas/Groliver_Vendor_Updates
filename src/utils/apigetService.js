@@ -26,8 +26,8 @@ export function catApi({ method }) {
     return getApiService(BaseUrl + endPoints.category, method);
 }
 
-export function subCatApi({ method }) {
-    return getApiService(BaseUrl + endPoints.subCategory, method);
+export function subCatApi({ id }) {
+    return getApiService(BaseUrl + endPoints.subCategory + "/" + id);
 }
 
 export function myProductApi({ }) {

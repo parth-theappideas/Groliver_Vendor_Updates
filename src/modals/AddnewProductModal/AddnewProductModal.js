@@ -9,16 +9,16 @@ import styles from './styles';
 const AddnewProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
 
     const [Loading, setLoading] = useState(false);
-    const ref = useRef();
+    // const ref = useRef();
 
-    useEffect(()=>{
-        const ClickedOutSide = (e) => {
-            if(ref.current && !ref.current(e.target)){
-                onClose()
-            }
-        }
-       ClickedOutSide()
-    })
+    // useEffect(()=>{
+    //     const ClickedOutSide = (e) => {
+    //         if(ref.current && !ref.current(e.target)){
+    //             onClose()
+    //         }
+    //     }
+    //    ClickedOutSide()
+    // })
 
     const Camerafile = () => {
         let Options = {
@@ -97,7 +97,7 @@ const AddnewProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
                                     />
                                 </Container>
                             </Container>
-                        </Container>w
+                        </Container>
 
                         <Container containerStyle={styles.border2} />
 
