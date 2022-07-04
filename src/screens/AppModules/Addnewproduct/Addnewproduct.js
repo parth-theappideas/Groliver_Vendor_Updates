@@ -42,13 +42,19 @@ const WeightValues = [
 const Addnewproduct = ( { navigation } ) => {
 
     const [ modalVisible, setModalVisible ] = useState( false );
-    const [ picture, setPicture ] = useState( '' );
     const [ catData, setCatData ] = useState( {} );
     const [ catList, setCatList ] = useState( [] );
     const [ subCatData, setSubCatData ] = useState();
     const [ subCatList, setSubCatList ] = useState( [] );
     const [ weightData, setWeightData ] = useState( WeightValues[ 0 ].wt_name );
     const [ Loading, setLoading ] = useState( false );
+    const [ image, setImage ] = useState( [
+        {
+            id: 1,
+            isAddImage: true,
+            image: require( '../../../assets/images/plus.png' ),
+        }
+    ] );
 
     console.log( "catdata", catData );
     console.log( "catlist", catList );
@@ -68,18 +74,18 @@ const Addnewproduct = ( { navigation } ) => {
             .required( "Required *" ),
         discount: yup
             .number()
-            .max( 1000, "Not Valid Number !" ),
+            .max( 100, "Not Valid Number !" ),
         stock: yup
             .number()
             .required( "Required *" ),
     } );
+    console.log( "ids", image );
 
     async function AddnewproductHandler ( values ) {
         console.log( "values==>", values );
         setLoading( true );
 
         var formData = new FormData();
-        let file_name = picture?.substring( picture?.lastIndexOf( '/' ) + 1 );
         formData.append( "name", values.title );
         formData.append( "price", values.price );
         formData.append( "weight", values.weight );
@@ -87,8 +93,8 @@ const Addnewproduct = ( { navigation } ) => {
         formData.append( "sub_cat_id", subCatData.id );
         formData.append( "stock", values.stock );
         formData.append( "flag", "v" );
-        formData.append( "discount", values.discount );
         formData.append( "description", values.description );
+        formData.append( "discount", values.discount );
         if ( values.discount ) {
             formData.append( "offer_flag", "y" );
         } else if ( !values.discount ) {
@@ -97,12 +103,22 @@ const Addnewproduct = ( { navigation } ) => {
             console.log( "Something wrong" );
         }
         formData.append( "unit", weightData );
-        formData.append( "image[]", {
-            uri: picture,
-            name: file_name,
-            type: 'image/jpg'
+
+        image.map( ( item ) => {
+            if ( !item.isAddImage ) {
+                let file_name = item.image?.substring( item.image?.lastIndexOf( '/' ) + 1 );
+                return formData.append( "image[]",
+                    {
+                        uri: item.image,
+                        name: file_name,
+                        type: 'image/jpg'
+                    } );
+            }else {
+                console.log("something ");
+            }
         } );
-        console.log( "Formdata=>", formData );
+        console.log( "Formdata=>", JSON.stringify(formData) );
+        console.log("image",image);
 
         try {
             let response = await addnewproductApi( { data: formData } );
@@ -135,12 +151,22 @@ const Addnewproduct = ( { navigation } ) => {
     }
 
     const SelectCategory = async ( itemValue ) => {
-        console.log("itemvalues",itemValue);
+        console.log( "itemvalues", itemValue );
         setCatData( itemValue );
-        let result = await subCatApi( { id : itemValue.id } );
+        let result = await subCatApi( { id: itemValue.id } );
         console.log( "response", result );
-        setSubCatList(result.data);
+        setSubCatList( result.data );
     };
+
+    // const clickHendler = ( image ) => {
+    //     setImage( ( prevImg ) => {
+    //         console.log( "previmag", prevImg );
+    //         return [
+    //             ...prevImg,
+    //             { image: image }
+    //         ];
+    //     } );
+    // };
 
     // async function subCategotyList () {
     //     let result = await subCatApi( { method: 'get' } );
@@ -160,8 +186,10 @@ const Addnewproduct = ( { navigation } ) => {
             <Container containerStyle={ styles.container }>
                 <AddnewProductitems
                     modalVisible={ modalVisible }
-                    setModalVisible={ setModalVisible }
-                    picture={ picture }
+                    image={ image }
+                    openModal={ () => {
+                        setModalVisible( true );
+                    } }
                 />
                 <Formik
                     initialValues={ {
@@ -323,7 +351,7 @@ const Addnewproduct = ( { navigation } ) => {
                                     color: 'red',
                                     fontSize: fs( 12 ),
                                     marginTop: vs( 5 ),
-                                    marginLeft: hs( 2 ),
+                                    marginLeft: hs( 4 ),
                                     position: 'absolute',
                                     left: 0
                                 } }>{ errors.price }</Label> ) : null }
@@ -332,7 +360,7 @@ const Addnewproduct = ( { navigation } ) => {
                                     color: 'red',
                                     fontSize: fs( 12 ),
                                     marginTop: vs( 5 ),
-                                    marginRight: hs( 20 ),
+                                    marginRight: hs( 15 ),
                                 } }>{ errors.weight }</Label> ) : null }
                             </Container>
 
@@ -372,24 +400,23 @@ const Addnewproduct = ( { navigation } ) => {
 
                             <Container containerStyle={ {
                                 marginTop: vs( 5 ),
-                                flexDirection: 'row',
-                                justifyContent: 'space-between'
+                                // flexDirection: 'row',
+                                // justifyContent: 'space-between'
                             } }>
-                                { touched.discount && errors.discount ? ( <Label style={ {
+                                {/* { touched.discount && errors.discount ? ( <Label style={ {
                                     color: 'red',
                                     fontSize: fs( 12 ),
                                     position: 'absolute',
                                     left: 0
-                                } }>{ errors.discount }</Label> ) : null }
+                                } }>{ errors.discount }</Label> ) : null } */}
 
                                 { touched.stock && errors.stock ? ( <Label style={ {
                                     color: 'red',
                                     fontSize: fs( 12 ),
                                     position: 'absolute',
-                                    right: 0
+                                    right: 0,
                                 } }>{ errors.stock }</Label> ) : null }
                             </Container>
-
                             <Btn
                                 title="Add"
                                 btnStyle={ styles.add_btn }
@@ -405,8 +432,14 @@ const Addnewproduct = ( { navigation } ) => {
 
             <AddnewProductModal
                 modalVisible={ modalVisible }
-                setModalVisible={ setModalVisible }
-                setPicture={ setPicture }
+                setImageHandler={ ( imagefile ) => {
+                    console.log( 'value', imagefile );
+                    setModalVisible( false );
+                    let imageArray = [ ...image ];
+                    imageArray.unshift( { image: imagefile } );
+                    setImage( imageArray );
+                } }
+                onClose={ () => setModalVisible( false ) }
             />
             { Loading ? <ModalLoadingIndicator /> : null }
         </ScrollView>

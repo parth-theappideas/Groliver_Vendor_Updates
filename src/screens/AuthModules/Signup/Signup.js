@@ -81,8 +81,8 @@ const Signup = ( { navigation } ) => {
             .number(),
         mobile_no: yup
             .number()
-            .min( 1999999999, "Not Valid Phone Number !" )
-            .max( 9999999999, "Not Valid Phone Number !" )
+            .min(1999999999, "Not Valid Phone Number !")
+            .max(9999999999, "Not Valid Phone Number !")
             .required( "Phone number is Required *" ),
         password: yup
             .string()
@@ -172,7 +172,7 @@ const Signup = ( { navigation } ) => {
                                     inputHeight={ 50 }
                                     textSize={ 14 }
                                 />
-                                { errors.name && touched.name ? ( <Label style={ {
+                                {touched.name && errors.name ? ( <Label style={ {
                                     color: 'red',
                                     marginTop: vs( 5 )
                                 } }>{ errors.name }</Label> ) : null }
@@ -190,7 +190,7 @@ const Signup = ( { navigation } ) => {
                                     inputHeight={ 50 }
                                     textSize={ 14 }
                                 />
-                                { errors.email && touched.email ? ( <Label style={ {
+                                { touched.email && errors.email ? ( <Label style={ {
                                     color: 'red',
                                     marginTop: vs( 5 )
                                 } }>{ errors.email }</Label> ) : null }
@@ -209,7 +209,7 @@ const Signup = ( { navigation } ) => {
                                     inputHeight={ 50 }
                                     textSize={ 14 }
                                 />
-                                { errors.password && touched.password ? ( <Label style={ {
+                                {touched.password && errors.password ? ( <Label style={ {
                                     color: 'red',
                                     marginTop: vs( 5 )
                                 } }>{ errors.password }</Label> ) : null }
@@ -248,9 +248,9 @@ const Signup = ( { navigation } ) => {
                                     onBlur={ handleBlur( 'mobile_no' ) }
                                     value={ values.mobile_no }
                                     inputHeight={ 50 }
-                                    textSize={ 14 }
+                                    // textSize={ 14 }
                                 />
-                                { errors.mobile_no && touched.mobile_no ? ( <Label style={ {
+                                {touched.mobile_no && errors.mobile_no ? ( <Label style={ {
                                     color: 'red',
                                     marginTop: vs( 5 )
                                 } }>{ errors.mobile_no }</Label> ) : null }

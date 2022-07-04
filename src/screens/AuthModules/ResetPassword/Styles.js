@@ -23,13 +23,13 @@ const styles = StyleSheet.create({
         fontFamily: Fonts.regular
     },
     newpsw_input:{
-        width: '92%',
+        width: screenWidth * 0.92,
         backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(20)
     },
     confirmpsw_input:{
-        width: '92%',
+        width: screenWidth * 0.92,
         backgroundColor: '#f2f2f2',
         borderColor: '#F2F2F2',
         marginTop: vs(10)
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#009345',
         borderRadius: 5,
         justifyContent: 'center',
-        width: '92%',
+        width: screenWidth * 0.92,
         alignSelf: 'center',
         marginTop: vs(20),
     },
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 5,
         justifyContent: 'center',
-        width: '92%',
+        width: screenWidth * 0.92,
         borderColor: '#fff',
         alignSelf: 'center',
         marginTop: vs(20),

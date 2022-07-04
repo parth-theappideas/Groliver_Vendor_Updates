@@ -122,7 +122,7 @@ const styles = StyleSheet.create( {
         backgroundColor: '#009345',
         borderRadius: 5,
         justifyContent: 'center',
-        width: '95%',
+        width: screenWidth * 0.92,
         alignSelf: 'center',
         marginTop: vs( 20 ),
     },

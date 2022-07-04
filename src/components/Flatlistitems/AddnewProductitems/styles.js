@@ -3,14 +3,15 @@ import { hs, screenWidth, vs } from '../../../utils/stylesUtils';
 
 const styles = StyleSheet.create( {
     container: {
-        // alignSelf:'flex-start'
+        flex: 1,
     },
     container2: {
         borderWidth: 1,
         width: screenWidth * 0.28,
-        marginHorizontal:hs(3.5),
-        marginTop:vs(7),
-        bottom:5,
+        marginHorizontal: hs( 3.5 ),
+        marginTop: vs( 7 ),
+        bottom: 5,
+        right: 3,
         height: vs( 120 ),
         borderColor: '#f2f2f2',
         borderRadius: 5,
@@ -30,14 +31,12 @@ const styles = StyleSheet.create( {
     add_img: {
         width: hs( 20 ),
         height: vs( 20 ),
-        // overflow: 'hidden',
+        // resizeMode: 'contain'
     },
     Clickimg: {
-        width: hs( 103),
-        height: vs( 120 ),
-        marginHorizontal:hs(5),
-        maxWidth: Dimensions.get( 'screen' ).width,
-        maxHeight: Dimensions.get( 'screen' ).height,
+        width: hs( 100 ),
+        height: vs( 110 ),
+        marginHorizontal: hs( 5 ),
         resizeMode: 'cover'
     },
 } );

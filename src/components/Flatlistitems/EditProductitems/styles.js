@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
         marginTop: vs(5)
     },
     del_img:{
-        width: hs(15),
-        height: hs(15),
+        width: hs(20),
+        height: hs(20),
         resizeMode: 'contain',
     }
 })

@@ -6,7 +6,7 @@ import { launchCamera, launchImageLibrary } from 'react-native-image-picker'
 import LoadingIndicator from '../../components/LoadingIndicator';
 import styles from './styles';
 
-const EditProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
+const EditProductModal = ({setImageHandler ,onClose , modalVisible, setModalVisible }) => {
 
     const [Loading, setLoading] = useState(false);
 
@@ -24,10 +24,7 @@ const EditProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
             } else if (response.errorCode) {
                 console.log('Image error', response.errorCode);
             } else {
-                const ImageAccess = response.assets[0].uri
-                setPicture(ImageAccess);
-                setModalVisible(!modalVisible);
-                console.log(response);
+                setImageHandler(response.assets[0].uri);
             }
         })
     }
@@ -41,12 +38,15 @@ const EditProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
         };
         launchImageLibrary(Options, (response) => {
             if (response.assets) { 
-                const ImageAccess = response.assets[0].uri
-                setPicture(ImageAccess);
-                setLoading(true);
-                setModalVisible(!modalVisible);
-                setLoading(false);
-                console.log(response);
+                // const ImageAccess = response.assets[0].uri
+                // setPicture(ImageAccess);
+                // setLoading(true);
+                // setModalVisible(!modalVisible);
+                // setLoading(false);
+                // console.log(response);
+                if (response.assets) {
+                    setImageHandler(response.assets[0].uri)
+                }
             }
         })
     }
@@ -57,9 +57,7 @@ const EditProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
                 animationType="slide"
                 transparent={true}
                 visible={modalVisible}
-                onRequestClose={() => {
-                    setModalVisible(!modalVisible);
-                }}
+                onRequestClose={onClose}
                 statusBarTranslucent={true}
             >
                 <Container containerStyle={styles.container2}>

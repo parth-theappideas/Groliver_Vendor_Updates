@@ -44,7 +44,6 @@ const IdProff = ({ navigation }) => {
                 console.log('response', response);
                 navigation.navigate("UploadDocs",{
                     fromIDProof:true,
-                    IdProof:true
                 });
             } else {
                 alert(response.message);

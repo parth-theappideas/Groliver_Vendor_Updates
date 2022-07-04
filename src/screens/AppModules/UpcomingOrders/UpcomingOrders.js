@@ -42,7 +42,7 @@ const UpcomingOrders = ({ navigation }) => {
         formData.append("order_id", 2);
         formData.append("status", "Accept");
         try {
-            let response = await ordermanageStatusApi({ data: formData })
+            let response = await ordermanageStatusApi({ data: formData });
             console.log("response of OrderAccept", response.data);
             setLoading(false);
             if (response.status === "Success") {

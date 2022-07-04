@@ -13,12 +13,12 @@ const styles = StyleSheet.create({
         marginTop: vs(20),
     },
     label: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         fontFamily: Fonts.regular,
         color: '#000'
     },
     extraLabel: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         marginTop: vs(15),
         fontFamily: Fonts.regular,
         color: '#000'
@@ -32,14 +32,16 @@ const styles = StyleSheet.create({
     label2: {
         // position: 'absolute',
         // left: 0,
-        fontSize: fs(14),
+        fontSize: fs(15),
+        fontFamily:Fonts.regular,
         color: '#000',
         left: hs(3)
     },
     label3: {
         marginRight: hs(30),
         paddingRight: hs(34),
-        fontSize: fs(14),
+        fontSize: fs(15),
+        fontFamily:Fonts.regular,
         color: '#000'
     },
     container4: {
@@ -48,12 +50,14 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around'
     },
     label4: {
-        fontSize: fs(14),
+        fontSize: fs(15),
+        fontFamily:Fonts.regular,
         position: 'absolute',
         left: hs(2),
     },
     label5: {
-        fontSize: fs(14),
+        fontSize: fs(15),
+        fontFamily:Fonts.regular,
         marginRight: hs(24)
     },
     container5: {
@@ -88,7 +92,8 @@ const styles = StyleSheet.create({
         height: vs(50),
     },
     picker_item: {
-        fontSize: fs(14)
+        fontSize: fs(15),
+        fontFamily:Fonts.regular
     },
     title_input: {
         width: screenWidth * 0.90,

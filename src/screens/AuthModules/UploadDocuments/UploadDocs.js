@@ -9,11 +9,11 @@ import styles from './styles'
 import { api_token } from '../../../utils/Globals'
 import { profileApi, uploadStatusApi } from '../../../utils/apigetService'
 import LoadingIndicator from '../../../components/LoadingIndicator'
+import IdProff from '../IdProof/IdProof';
 
 const UploadDocs = ({ route, navigation }) => {
-    // const [proof, setProof] = useState(false);
-    const [AddressProff, setAddressProof] = useState(false);
-    const [IDProof, setIDProof] = useState(false);
+    const [AddressProffFlag, setAddressProofFlag] = useState(false);
+    const [IDProofFlag, setIDProofFlag] = useState(false);
     const [Loading, setLoading] = useState(false);
     console.log("api of doc-->", api_token);
 
@@ -24,15 +24,15 @@ const UploadDocs = ({ route, navigation }) => {
             setLoading(false);
             if (result.status === "Success") {
                 console.log("Result", result);
-                if (AddressProff && route.params?.fromIDProof) {
+                if (route.params?.fromAddressProof && route.params?.fromIDProof) {
                     navigation.navigate("Dashboard");
                 }
             } else {
                 alert(result.message);
+                setLoading(false);
             }
         } catch (error) {
             console.log("erros", error);
-            setLoading(false);
         }
     }
 
@@ -43,11 +43,10 @@ const UploadDocs = ({ route, navigation }) => {
             if (response.status === "Success") {
                 setLoading(false);
                 console.log("response of get proof", response);
-                setAddressProof(true);
-                setIDProof(!true);
+                setAddressProofFlag(response.data.address_proof_flag)
+                setIDProofFlag(response.data.id_proof_flag)
             } else {
                 alert(response.message);
-                setLoading(false);
             }
         } catch (error) {
             console.log("erros", error);
@@ -63,9 +62,11 @@ const UploadDocs = ({ route, navigation }) => {
         } else {
             console.log("errors");
         }
-    }, [route.params])
+    }, [route.params]);
 
-    console.log("Idproof", IDProof);
+    console.log("addressFlag",AddressProffFlag);
+
+    // console.log(3 === "3");
 
     return (
         <ScrollView style={{
@@ -87,12 +88,12 @@ const UploadDocs = ({ route, navigation }) => {
                         <Container containerStyle={styles.container4}>
                             <Label style={styles.label}>Address Proff</Label>
                             <Container containerStyle={styles.container5}>
-                                {AddressProff ?
+                                {AddressProffFlag == "P" ? null :
                                     <Image
                                         source={Images.tick}
                                         style={styles.tickimg}
                                     />
-                                    : null}
+                                }
                                 <Image
                                     source={Images.right}
                                     style={styles.rightimg}
@@ -107,12 +108,12 @@ const UploadDocs = ({ route, navigation }) => {
                         <Container containerStyle={styles.container4}>
                             <Label style={styles.label}>ID Proff</Label>
                             <Container containerStyle={styles.container5}>
-                                {route.params?.fromIDProof ?
+                                {IDProofFlag == "P" ? null :
                                     <Image
                                         source={Images.tick}
                                         style={styles.tickimg}
                                     />
-                                    : null}
+                                }
                                 <Image
                                     source={Images.right}
                                     style={styles.rightimg}
@@ -132,7 +133,7 @@ const UploadDocs = ({ route, navigation }) => {
                         alignItems: 'center',
                         justifyContent: 'center'
                     }}>
-                        {AddressProff == true && route.params?.fromIDProof?
+                        {AddressProffFlag == "P" && IDProofFlag == "P" ?
                             <Label style={styles.label2}>Your document has been verified</Label>
                             :
                             <>
@@ -146,7 +147,7 @@ const UploadDocs = ({ route, navigation }) => {
                 <Btn
                     title="Done"
                     btnStyle={{
-                        backgroundColor: AddressProff == true && route.params?.fromIDProof ? "#009345" : "grey",
+                        backgroundColor: route.params?.fromIDProof == true && route.params?.fromIDProof === true ? "#009345" : "grey",
                         borderRadius: 5,
                         justifyContent: 'center',
                         width: '90%',

@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         marginHorizontal: hs(10)
     },
     label: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         color: '#000',
         marginTop: vs(10),
         fontFamily: Fonts.regular

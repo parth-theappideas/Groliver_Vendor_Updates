@@ -60,15 +60,15 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     notificationimg: {
-        width: hs(18),
-        height: vs(18),
+        width: hs(19),
+        height: vs(19),
         resizeMode: 'contain',
         alignItems: 'center',
         alignSelf: 'center'
         // marginTop:vs(2)
     },
     text3: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         color: '#000',
         marginLeft: hs(7),
         fontFamily: Fonts.regular
@@ -97,14 +97,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     helpimg: {
-        width: hs(18),
-        height: vs(18),
+        width: hs(19),
+        height: vs(19),
         resizeMode: 'contain',
         alignItems: 'center',
         alignSelf: 'center'
     },
     text4: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         color: '#000',
         marginLeft: hs(10),
         fontFamily: Fonts.regular
@@ -121,14 +121,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     logoutimg: {
-        width: hs(18),
-        height: vs(18),
+        width: hs(19),
+        height: vs(19),
         resizeMode: 'contain',
         alignItems: 'center',
         alignSelf: 'center'
     },
     text5: {
-        fontSize: fs(14),
+        fontSize: fs(15),
         color: '#000',
         marginLeft: hs(10),
         fontFamily: Fonts.regular

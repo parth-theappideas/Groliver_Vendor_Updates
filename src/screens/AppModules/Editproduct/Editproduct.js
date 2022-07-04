@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ScrollView, StatusBar, ToastAndroid, Image, Pressable } from 'react-native';
+import { ScrollView, StatusBar, ToastAndroid, Image, Pressable, View } from 'react-native';
 import { fs, hs, screenWidth, vs } from "../../../utils/stylesUtils";
 import InputBox from "../../../components/InputBox";
 import { Picker } from '@react-native-picker/picker';
@@ -18,6 +18,8 @@ import EditProductitems from "../../../components/Flatlistitems/EditProductitems
 import PagerView from "react-native-pager-view";
 import Images from "../../../const/Images";
 import ModalLoadingIndicator from "../../../components/ModalLoadingIndicator";
+import AddnewProductitems from "../../../components/Flatlistitems/AddnewProductitems/AddnewProductitems";
+import EditProductImages from "../../../components/Flatlistitems/EditProductImages/EditProductImages";
 
 const WeightValues = [
     {
@@ -42,9 +44,19 @@ const WeightValues = [
     }
 ];
 
+let users = [
+    { firstName: "Susan", age: 14 },
+    { firstName: "Daniel", age: 16 },
+    { firstName: "Bruno", age: 56 },
+    { firstName: "Jacob", age: 15 },
+    { firstName: "Sam", age: 64 },
+    { firstName: "Dave", age: 56 },
+    { firstName: "Neils", age: 65 }
+  ];
+
 const EditProduct = ( { navigation, route } ) => {
     const { ...productDetails } = route.params;
-    const { image } = route.params;
+    const { imageRendering } = route.params;
 
     console.log( "token from edit product", api_token );
     console.log( "product detais", productDetails );
@@ -52,16 +64,37 @@ const EditProduct = ( { navigation, route } ) => {
     const [ modalVisible, setModalVisible ] = useState( false );
     const [ picture, setPicture ] = useState( '' );
     const [ catData, setCatData ] = useState( {} );
-    const [ subCatData, setSubCatData ] = useState( productDetails.sub_category.name );
+    const [ subCatData, setSubCatData ] = useState( {} );
     const [ catList, setCatList ] = useState( [] );
     const [ subCatList, setSubCatList ] = useState( [] );
     const [ Loading, setLoading ] = useState( false );
     const [ weightData, setWeightData ] = useState( productDetails.unit );
+    const [ editImage, setEditImage ] = useState( [
+        {
+            id: 1,
+            isEditImage: true,
+            image: require( '../../../assets/images/plus.png' ),
+        }
+    ] );
 
     console.log( "selec", productDetails );
 
+    const youngPeople = users.filter((person)=>{
+        return person.age <= 15;
+    })
+
+    const srPeople = users.filter((person) => {
+        return person.age >= 50;
+    })
+
+    console.log("youngpeople",youngPeople);
+    console.log("srPeople",srPeople);
+
+    const Bruno = users.find((person) => person.firstName == "Bruno");
+    console.log("Bruno",Bruno);
+
     useEffect( () => {
-        setPicture( image?.image || '' );
+        setPicture( imageRendering?.image || '' );
     }, [] );
 
     console.log( "sub", productDetails.sub_category.name );
@@ -81,7 +114,7 @@ const EditProduct = ( { navigation, route } ) => {
             .number(),
         discount: yup
             .number()
-            .max( 1000, "Not Valid Number !" ),
+            .max( 100, "Not Valid Number !" ),
         stock: yup
             .number(),
     } );
@@ -118,19 +151,35 @@ const EditProduct = ( { navigation, route } ) => {
         } else {
             console.log( "Somthing Wrong" );
         }
-        if ( image?.image != picture ) {
-            formData.append( "image", {
+       
+        if ( imageRendering?.image != picture ) {
+            formData.append( "image[]", {
                 uri: picture,
                 name: file_name,
                 type: 'image/jpg'
             } );
+        }else {
+            editImage.map((item)=> {
+                if(!item.isEditImage){
+                    let file_name = item.image?.substring( item.image?.lastIndexOf( '/' ) + 1 );
+                    return formData.append("image[]",
+                    {
+                        uri: item.image,
+                        name: file_name,
+                        type: 'image/jpg'
+                    })
+                } else{
+                    console.log("Something");
+                }
+            })
         }
+
         formData.append( "cat_id", catData.id );
         formData.append( "sub_cat_id", subCatData.id );
         formData.append( "flag", "V" );
         formData.append( "unit", weightData );
         formData.append( "product_id", route.params.prod_id );
-        console.log( "formdatas=>", formData );
+        console.log( "formdatas of edit product=>", formData );
 
         try {
             let response = await editproductApi( { data: formData } );
@@ -147,7 +196,6 @@ const EditProduct = ( { navigation, route } ) => {
             }
         } catch ( error ) {
             console.log( "errors", error );
-            alert( "Something Missing" );
             setLoading( false );
         }
     }
@@ -160,12 +208,24 @@ const EditProduct = ( { navigation, route } ) => {
     }, [] );
 
     async function categotyList () {
-        let result = await catApi( { method: 'get' } );
+        let result = await catApi( {} );
         console.log( "Category result", result.data );
         if ( result?.data ) {
             setCatList( result.data );
+            const categoryData = result?.data?.find( ( item ) => item?.id == productDetails?.cat_id );
+            console.log( 'categoryData', categoryData );
+            if ( categoryData ) SelectCategoryHandler( categoryData );
+            // setCatData( categoryData );
         }
     }
+
+    // const selectedValueHandler = ( item ) => {
+    //     console.log( "items:", item );
+    //     setCatData( item );
+    //     // let result = await catApi( { id: item.id } );
+    //     // console.log( "results:", result );
+    //     // setCatList(result.data);
+    // };
 
     const SelectCategoryHandler = async ( itemValue ) => {
         console.log( "itemvalues", itemValue );
@@ -173,6 +233,10 @@ const EditProduct = ( { navigation, route } ) => {
         let result = await subCatApi( { id: itemValue.id } );
         console.log( "response:", result );
         setSubCatList( result.data );
+        const subCatData = result?.data?.find( ( item ) => item?.id == productDetails?.sub_cat_id );
+        console.log( 'subCatData', subCatData );
+        if ( subCatData ) setSubCatData( subCatData );
+
     };
 
     // async function subCategotyList () {
@@ -193,28 +257,18 @@ const EditProduct = ( { navigation, route } ) => {
             <Container containerStyle={ styles.container }>
                 <EditProductitems
                     modalVisible={ modalVisible }
+                    image={ imageRendering }
                     setModalVisible={ setModalVisible }
                     picture={ picture }
                     setPicture={ setPicture }
-                    image={ image }
                 />
-
-                {/* <Container containerStyle={{ marginTop: vs(10) }} onPress={() => setModalVisible(!modalVisible)}>
-                    <Container containerStyle={styles.Imgcontainer}>
-                        <Image
-                            source={{ uri: picture || 'dummy' }}
-                            style={picture ? styles.Clickimg : styles.add_img}
-                        />
-                        {image.image ?
-                            <Pressable style={styles.pressableBtn}>
-                                <Image
-                                    source={Images.del2}
-                                    style={styles.del_img}
-                                />
-                            </Pressable>
-                            : null}
-                    </Container>
-                </Container> */}
+                <EditProductImages
+                    modalVisible={modalVisible}
+                    image={editImage}
+                    openModal={()=>{
+                        setModalVisible(true);
+                    }}
+                />
 
                 <Formik
                     initialValues={ {
@@ -409,12 +463,21 @@ const EditProduct = ( { navigation, route } ) => {
                         </>
                     ) }
                 </Formik>
-                <EditProductModal
-                    modalVisible={ modalVisible }
-                    setModalVisible={ setModalVisible }
-                    setPicture={ setPicture }
-                />
             </Container>
+            <EditProductModal
+                    // modalVisible={ modalVisible }
+                    // setModalVisible={ setModalVisible }
+                    // setPicture={ setPicture }
+                    modalVisible={modalVisible}
+                    setImageHandler={(imageFile)=>{
+                        console.log("imagefile",imageFile);
+                        setModalVisible(false);
+                        let imageArray = [...editImage];
+                        imageArray.unshift({ image:imageFile })
+                        setEditImage(imageArray);
+                    }}
+                    onClose={()=> setModalVisible(false)}
+                />
             { Loading ? <ModalLoadingIndicator /> : null }
         </ScrollView>
     );

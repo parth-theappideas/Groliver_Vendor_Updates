@@ -13,7 +13,7 @@ const ProductDetail = ({ navigation, route }) => {
 
     const [Loading, setLoading] = useState(false);
     const [productDetails, setProductDetails] = useState({});
-    const [image, setImage] = useState({});
+    const [imageRendering , setImageRendering] = useState({});
 
     console.log("token of ProductDetails =====>", api_token);
 
@@ -26,9 +26,7 @@ const ProductDetail = ({ navigation, route }) => {
             if (response.status === "Success") {
                 console.log("response of product details", response);
                 setProductDetails(response.data[0]);
-                let obj = {}
-                obj.image = response.data[0].product_image[0].image;
-                setImage(obj);
+                setImageRendering(response.data[0].product_image);
             }
         } catch (error) {
             console.log("errors", error);
@@ -77,7 +75,7 @@ const ProductDetail = ({ navigation, route }) => {
             <StatusBar backgroundColor="white" barStyle="dark-content" />
             <Productdetailitems
                 item={productDetails}
-                imageData={image}
+                image={imageRendering}
             />
             <Container containerStyle={styles.container6}>
                 <Btn
@@ -94,7 +92,7 @@ const ProductDetail = ({ navigation, route }) => {
                     btnHeight={50}
                     textColor={'white'}
                     textSize={14}
-                    onPress={() => navigation.navigate("EditProduct", { ...productDetails, image, prod_id: route.params.prod_id })}
+                    onPress={() => navigation.navigate("EditProduct", { ...productDetails, imageRendering, prod_id: route.params.prod_id })}
                 />
             </Container>
             {Loading ? <LoadingIndicator /> : null}

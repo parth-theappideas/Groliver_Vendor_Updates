@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { hs, vs } from '../../../utils/stylesUtils';
+import { hs, screenWidth, vs } from '../../../utils/stylesUtils';
 
 const styles = StyleSheet.create({
     container: {
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         right: 0,
         bottom: vs(30),
-        marginHorizontal: hs(20),
+        marginHorizontal: hs(15),
         alignSelf: 'center',
     },
     addimg: {
@@ -19,13 +19,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
     },
     search_input: {
-        // width: screenWidth * 0.91,
-        // backgroundColor: '#F2F2F2',
-        // borderColor: '#F2F2F2',
-        // elevation: 1,
-        // marginTop: vs(10),
-        // alignSelf: 'center'
-        width: '91%',
+        width: screenWidth * 0.91,
         height: vs(45),
         backgroundColor: '#f2f2f2',
         borderColor: '#f2f2f2',

@@ -108,7 +108,6 @@ const ForgotPassword = ( { navigation } ) => {
                         </>
                     ) }
                 </Formik>
-
                 <Btn
                     title="Back to login"
                     btnStyle={ styles.back_login_Btn }

@@ -22,8 +22,8 @@ export function profileApi({ }) {
     return getApiService(BaseUrl + endPoints.profile);
 }
 
-export function catApi({ method }) {
-    return getApiService(BaseUrl + endPoints.category, method);
+export function catApi({  }) {
+    return getApiService(BaseUrl + endPoints.category );
 }
 
 export function subCatApi({ id }) {

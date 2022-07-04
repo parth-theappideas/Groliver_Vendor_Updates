@@ -6,9 +6,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'white',
-        marginTop: vs(15),
-        paddingTop: vs(5),
-        marginHorizontal: hs(15),
+        marginTop: vs( 15 ),
+        paddingTop: vs( 5 ),
+        marginHorizontal:hs(15),
         flexDirection: 'row',
     },
     borderStyle: {

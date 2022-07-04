@@ -1,71 +1,39 @@
 import React from 'react';
 import { Image, View, FlatList } from 'react-native';
+import { hs, vs } from '../../../utils/stylesUtils';
 import Container from '../../container';
 import styles from './styles';
 
-const AddnewProductitems = ( { modalVisible, setModalVisible, picture } ) => {
+const AddnewProductitems = ( { openModal, modalVisible, setModalVisible, picture, image } ) => {
 
-    const AddProductData = [
-        {
-            id: 1,
-            add_img: require( '../../../assets/images/plus.png' ),
-        },
-        {
-            id: 2,
-            add_img: require( '../../../assets/images/plus.png' ),
-        },
-        {
-            id: 3,
-            add_img: require( '../../../assets/images/plus.png' ),
-        },
-        {
-            id: 4,
-            add_img: require( '../../../assets/images/plus.png' ),
-        },
-        {
-            id: 5,
-            add_img: require( '../../../assets/images/plus.png' ),
-        },
-    ];
-
+    console.log( image );
     return (
-        <>
-            {/* { AddProductData.map( ( item, index ) => {
+        <FlatList
+            data={ image }
+            keyExtractor={ ( item ) => item.id }
+            numColumns={ 3 }
+            renderItem={ ( { item } ) => {
                 return (
-                    <Container key={index}>
-                        <Container onPress={ () => setModalVisible( !modalVisible ) }>
-                            <Container containerStyle={ styles.container }>
-                                <Container containerStyle={ styles.container2 }>
-                                    <Image
-                                        source={ picture ? { uri: picture || 'dummy' } : item.add_img}
-                                        style={ picture ? styles.Clickimg : styles.add_img }
-                                    />
-                                </Container>
-                            </Container>
-                        </Container>
-                     </Container>
-                );
-            } ) } */}
-
-            <FlatList
-                keyExtractor={ ( item ) => item.id }
-                data={ AddProductData }
-                numColumns={ 3 }
-                renderItem={ ( { item } ) => (
-                    <Container onPress={ () => setModalVisible( !modalVisible ) }>
-                        <Container containerStyle={ styles.container }>
-                            <Container containerStyle={ styles.container2 }>
-                                <Image
-                                    source={ picture ? { uri: picture || 'dummy' } : item.add_img }
-                                    style={ picture ? styles.Clickimg : styles.add_img }
-                                />
-                            </Container>
+                    <Container onPress={ openModal }>
+                        <Container containerStyle={ {
+                            borderWidth: 1,
+                            borderColor: '#f2f2f2',
+                            width: hs( 100 ),
+                            height: vs( 110 ),
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginHorizontal: hs( 4 ),
+                            marginVertical: vs( 4 )
+                        } }>
+                            <Image
+                                source={ item.isAddImage ? item.image : { uri: item.image } }
+                                style={ item.isAddImage ? styles.add_img : styles.Clickimg }
+                            />
                         </Container>
                     </Container>
-                ) }
-            />
-
-        </>
+                );
+            } }
+        />
     );
 };
 

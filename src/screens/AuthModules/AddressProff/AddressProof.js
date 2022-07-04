@@ -34,7 +34,6 @@ const AddressProff = ({ navigation }) => {
                 console.log('response', response);
                 navigation.navigate("UploadDocs", {
                     fromAddressProof: true,
-                    picture: picture
                 });
             } else {
                 alert(response.message);

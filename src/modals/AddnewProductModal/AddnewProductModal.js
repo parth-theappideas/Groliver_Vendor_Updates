@@ -6,19 +6,9 @@ import { launchCamera, launchImageLibrary } from 'react-native-image-picker'
 import LoadingIndicator from '../../components/LoadingIndicator';
 import styles from './styles';
 
-const AddnewProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
+const AddnewProductModal = ({setImageHandler ,onClose,modalVisible,image }) => {
 
     const [Loading, setLoading] = useState(false);
-    // const ref = useRef();
-
-    // useEffect(()=>{
-    //     const ClickedOutSide = (e) => {
-    //         if(ref.current && !ref.current(e.target)){
-    //             onClose()
-    //         }
-    //     }
-    //    ClickedOutSide()
-    // })
 
     const Camerafile = () => {
         let Options = {
@@ -34,21 +24,14 @@ const AddnewProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
             } else if (response.errorCode) {
                 console.log('Image error', response.errorCode);
             } else {
+                setImageHandler(response.assets[0].uri)
                 console.log("response:",response);
-                const ImageAccess = response.assets[0].uri
-                setPicture(ImageAccess);
-                setModalVisible(!modalVisible);
-                console.log(response);
             }
         })
     }
 
     const Choosefile = () => {
         let Options = {
-            // meadiaType: 'photo',
-            // maxWidth: 300,
-            // maxHeight: 550,
-            // quality: 1,
             storageOptions: {
                 skipBackup: true,
                 path: 'images',
@@ -56,18 +39,9 @@ const AddnewProductModal = ({ modalVisible, setModalVisible, setPicture }) => {
         };
         launchImageLibrary(Options, (response) => {
             if (response.assets) {
-                const ImageAccess = response.assets[0].uri
-                setPicture(ImageAccess);
-                setLoading(true);
-                setModalVisible(!modalVisible);
-                setLoading(false);
-                console.log(response);
+                setImageHandler(response.assets[0].uri)
             }
         })
-    }
-
-    const onClose = () => {
-        setModalVisible(!modalVisible);
     }
 
     return (
